@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-answers/javascript" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.4.0">
+<title data-rh="true">Javascript | Front-end interview questions</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/docs/answers/javascript"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Javascript | Front-end interview questions"><meta data-rh="true" name="description" content="1. What is strict mode? What are some of the advantages/disadvantages of using it?"><meta data-rh="true" property="og:description" content="1. What is strict mode? What are some of the advantages/disadvantages of using it?"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/docs/answers/javascript"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/answers/javascript" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/answers/javascript" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.70ff24a8.css">
+<script src="/assets/js/runtime~main.cf51990d.js" defer="defer"></script>
+<script src="/assets/js/main.3abde22a.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="Front-end Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="Front-end Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Front-end</b></a><a class="navbar__item navbar__link" href="/docs/questions/html">Questions</a><a class="navbar__item navbar__link" href="/docs/answers/html">Answers</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/pathliving/front-end-interview-questions" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro">Intro</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/resources">Resources</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/todo">TODO</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/questions/html">Questions</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/html">HTML</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/css">CSS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/javascript">Javascript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/typescript">Typecript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/react">React</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/testing">Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/fundamentals">Fundamentals</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/a11y">A11Y</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/answers/html">Answers</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/html">HTML</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/css">CSS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/answers/javascript">Javascript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/typescript">Typecript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/react">React</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/testing">Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/fundamentals">Fundamentals</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/a11y">A11Y</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Answers</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Javascript</span><meta itemprop="position" content="2"></li></ul></nav><div class="theme-doc-markdown markdown"><h1 id="javascript">Javascript</h1>
+<ol>
+<li>
+<p>What is strict mode? What are some of the <code>advantages/disadvantages</code> of using it?
+Strict mode is a way to opt in to a restricted variant of JavaScript, introduced in ECMAScript 5. It eliminates some silent errors, improves performance by enabling optimizations, and prevents certain actions that are likely to be bugs (e.g., using undeclared variables). However, it can be restrictive and might break legacy code.</p>
+</li>
+<li>
+<p>Have you ever used JavaScript templating? If so, what libraries have you used?
+Yes, I have used JavaScript templating. Some popular libraries include Handlebars.js, Mustache.js, and EJS. These libraries help in generating HTML with dynamic data more efficiently.</p>
+</li>
+<li>
+<p>What is the difference between an attribute and a property?
+Attributes are defined in the HTML and represent initial values. Properties are part of the DOM and can change over time. For example, the value attribute of an <code>&lt;input&gt;</code> sets the initial value, while the value property reflects the current value.</p>
+</li>
+<li>
+<p>What are the pros and cons of extending built-in JavaScript objects?
+Pros: Can add new functionality or improve existing behavior. Cons: Can lead to conflicts with future ECMAScript versions or other libraries, and can cause unpredictable behavior in code.</p>
+</li>
+<li>
+<p>What is type casting (conversion) in JS?
+Type casting (conversion) refers to converting a value from one type to another, such as converting a string to a number using Number(), parseInt(), or parseFloat().</p>
+</li>
+<li>
+<p>What is type coercion? What are common pitfalls of relying on type coercion in JavaScript code?
+Type coercion is JavaScript&#x27;s automatic conversion of values from one type to another. Common pitfalls include unexpected results due to implicit conversions, like 0 == &#x27;&#x27; being true.</p>
+</li>
+<li>
+<p>What are explicit and implicit casting (conversion) of data types in JS?
+Explicit casting involves manually converting a value, like Number(&#x27;123&#x27;). Implicit casting happens automatically, such as when adding a number and a string (&#x27;1&#x27; + 2 results in &#x27;12&#x27;).</p>
+</li>
+<li>
+<p>What is the difference between == and ===?
+== checks for value equality with type coercion, while === checks for both value and type equality. === is generally preferred to avoid unexpected results from type coercion.</p>
+</li>
+<li>
+<p>Why is it called a Ternary operator, what does the word Ternary indicate?
+It&#x27;s called a Ternary operator because it takes three operands: a condition, a result if true, and a result if false. Example: condition ? trueResult : falseResult.</p>
+</li>
+<li>
+<p>What do you know about optional chaining operators? What benefits does it bring?
+Optional chaining (?.) allows safe access to deeply nested properties, returning undefined if a reference is null or undefined, thus preventing runtime errors. It simplifies checking for the existence of properties.</p>
+</li>
+<li>
+<p>Can you give an example for destructuring an object or an array?</p>
+<pre><code class="language-js">const person = { name: &quot;John&quot;, age: 30 };
+const { name, age } = person;
+
+
+const arr = [1, 2, 3];
+const [first, second, third] = arr;
+</code></pre>
+</li>
+<li>
+<p>What is Interpolation in JavaScript?
+Interpolation is embedding expressions within string literals using template literals. Example: <code>Hello, ${name}!</code>.</p>
+</li>
+<li>
+<p>Can you give an example of generating a string with ES6 Template Literals?</p>
+<pre><code class="language-js">const name = &quot;John&quot;;
+const message = `Hello, ${name}! Welcome to the team.`;
+</code></pre>
+</li>
+<li>
+<p>What are the benefits of using spread syntax and how is it different from rest syntax?
+Spread syntax (...) expands elements of an iterable. Rest syntax collects all remaining elements. Spread is used in arrays and objects, while rest is used in function parameters.</p>
+</li>
+</ol>
+<p>javascript
+Copy code</p>
+<pre><code class="language-js">// Spread
+const arr = [1, 2, 3];
+const newArr = [...arr, 4, 5];
+
+// Rest
+function sum(...numbers) {
+  return numbers.reduce((acc, num) =&gt; acc + num, 0);
+}
+</code></pre>
+<ol start="15">
+<li>
+<p>What is scope?
+Scope determines the visibility of variables. JavaScript has function scope and block scope. Variables declared with var have function scope, while those declared with let and const have block scope.</p>
+</li>
+<li>
+<p>Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
+Modifying the global scope can lead to naming conflicts and unpredictable behavior, especially in large codebases or when using third-party libraries.</p>
+</li>
+<li>
+<p>Describe the difference between let, const, and var. Can you change a property of an object defined via const? How you can change this behavior?
+let: Block-scoped, can be updated, but not re-declared in the same scope.
+const: Block-scoped, cannot be updated or re-declared.
+var: Function-scoped, can be updated and re-declared.
+Yes, you can change properties of an object defined with const because const prevents reassigning the variable, but not modifying the object&#x27;s properties.</p>
+</li>
+</ol>
+<p>javascript
+Copy code</p>
+<pre><code class="language-js">const obj = { name: &quot;John&quot; };
+obj.name = &quot;Doe&quot;; // Allowed
+</code></pre>
+<ol start="18">
+<li>
+<p>What is the difference between a variable that is: null, undefined or undeclared?
+null: Explicitly assigned no value.
+undefined: Declared but not assigned a value.
+undeclared: Not declared at all in the current scope.</p>
+</li>
+<li>
+<p>What language constructions do you use for iterating over object properties and array items?
+Objects: for...in loop, Object.keys(), Object.values(), Object.entries().
+Arrays: for loop, for...of loop, forEach(), map(), filter(), reduce().</p>
+</li>
+<li>
+<p>Can you describe the main difference between the Array.forEach() loop and Array.map() methods and why you would pick one versus the other?
+forEach(): Executes a function for each array element, doesn&#x27;t return a new array.
+map(): Executes a function for each array element, returns a new array with the results. Use map() when you need a new transformed array.</p>
+</li>
+<li>
+<p>What is the difference between while and do-while loops in JavaScript?
+while: Checks the condition before executing the loop body.
+do-while: Executes the loop body at least once before checking the condition.</p>
+</li>
+<li>
+<p>What methods of Array mutate and what methods not mutate arrays (sort, reverse, splice, push, pop, shift, unshift - mutate; reduce, map - not mutate)?
+Mutate: sort(), reverse(), splice(), push(), pop(), shift(), unshift().
+Not Mutate: reduce(), map(), filter(), slice().</p>
+</li>
+<li>
+<p>What does a deep or shallow copy of an object mean? How to do each of them?
+Shallow copy: Copies an object&#x27;s properties but not nested objects. Use Object.assign() or the spread operator (...).
+Deep copy: Copies an object and all nested objects. Use libraries like lodash (_.cloneDeep()) or structuredClone().
+javascript
+Copy code</p>
+</li>
+</ol>
+<pre><code class="language-js">// Shallow copy
+const obj = { a: 1, b: { c: 2 } };
+const shallowCopy = { ...obj };
+
+// Deep copy
+const deepCopy = structuredClone(obj);
+</code></pre>
+<ol start="24">
+<li>
+<p>What is the difference between the in operator and the hasOwnProperty method?
+in: Checks if a property exists in the object or its prototype chain.
+hasOwnProperty: Checks if a property exists directly on the object. 25. What are object property descriptors? Tell about their practical application.
+Property descriptors define properties&#x27; characteristics, such as configurable, enumerable, writable, and value. They allow fine-grained control over object properties. Use Object.defineProperty() to set descriptors.</p>
+</li>
+<li>
+<p>Describe the purpose and principles of working with Map and Set collections.
+Map: Stores key-value pairs, keys can be any type. Maintains insertion order.
+Set: Stores unique values of any type. No duplicates allowed.</p>
+</li>
+<li>
+<p>Describe the purpose and principles of working with WeakMap and WeakSet collections? How are they different from Map and Set collections respectively?
+WeakMap: Keys are objects, not enumerable, does not prevent garbage collection.
+WeakSet: Stores unique objects, not enumerable, does not prevent garbage collection.</p>
+</li>
+<li>
+<p>Explain the difference between mutable and immutable objects.
+Mutable objects: Can be changed after creation.
+Immutable objects: Cannot be changed after creation. Any change creates a new object.</p>
+</li>
+<li>
+<p>What is an example of an immutable object in JavaScript? Name several ways to create an immutable object in JavaScript.
+Example: String is an immutable object.
+To create immutable objects:</p>
+</li>
+</ol>
+<p>Use Object.freeze().
+Use libraries like Immutable.js.
+Use const for arrays and objects with immutability patterns.
+javascript
+Copy code</p>
+<pre><code class="language-js">const frozenObject = Object.freeze({ a: 1 });
+</code></pre>
+<ol start="30">
+<li>
+<p>What are the pros and cons of immutability?
+Pros: Predictability, easier debugging, safer concurrent programming. Cons: Performance overhead due to copying, increased memory usage.</p>
+</li>
+<li>
+<p>How can you achieve immutability in your own code?
+Use <code>Object.freeze()</code> for shallow immutability.
+Use libraries like Immutable.js.
+Avoid direct mutations, use pure functions to return new states.</p>
+</li>
+<li>
+<p>What is the difference between the behavior of <code>isNaN()</code> and <code>Number.isNaN()</code>?
+<code>isNaN()</code>: Converts the value to a number and checks if it&#x27;s NaN, which can lead to false positives.
+<code>Number.isNaN()</code>: Only returns true if the value is exactly NaN.
+javascript
+Copy code</p>
+<pre><code class="language-js">isNaN(&quot;hello&quot;); // true
+Number.isNaN(&quot;hello&quot;); // false
+</code></pre>
+</li>
+<li>
+<p>Why does typeof null return object?
+Due to a historical bug in JavaScript, typeof null returns object. null was intended to represent a null object reference.</p>
+</li>
+<li>
+<p>Tell about the Symbol data type and its practical application.
+Symbol is a unique and immutable primitive value used to create unique object keys. Practical uses include defining non-enumerable properties and avoiding property name collisions.</p>
+</li>
+</ol>
+<p>javascript
+Copy code</p>
+<pre><code class="language-js">const sym = Symbol(&quot;description&quot;);
+const obj = { [sym]: &quot;value&quot; };
+</code></pre>
+<ol start="35">
+<li>
+<p>What is it iterator and generator?
+Iterator: An object with a <code>next()</code> method that returns <code>{ value, done }</code> pairs.
+Generator: A function that can pause and resume execution, defined using <code>function\*</code> syntax, and returns an iterator.</p>
+</li>
+<li>
+<p>How we know when generator finish yield values?
+When a generator finishes yielding values, the done property in the result object returned by the generator&#x27;s next() method becomes true.</p>
+</li>
+<li>
+<p>Javascript pure functions
+Pure functions are functions that, given the same inputs, always return the same output and have no side effects. They enhance predictability and ease of testing.</p>
+</li>
+<li>
+<p>How do arrow functions differ from regular functions? What advantage is there for using the arrow syntax for a method in a constructor?
+Arrow functions do not have their own this binding; they inherit this from the enclosing context. This avoids common issues with this in regular functions, making them ideal for methods in constructors and callbacks.</p>
+</li>
+<li>
+<p>What is a typical use case for anonymous functions?
+Anonymous functions are used as arguments to other functions, such as in callbacks or event handlers, where a named function isn&#x27;t necessary.</p>
+</li>
+<li>
+<p>What is function chaining? Write an example using this approach.
+Function chaining involves calling multiple methods on an object in a single statement, returning the object each time. This allows for a fluent interface.</p>
+</li>
+</ol>
+<p>javascript
+Copy code</p>
+<pre><code class="language-js">class Car {
+  constructor() {
+    this.speed = 0;
+  }
+  accelerate() {
+    this.speed += 10;
+    return this;
+  }
+  brake() {
+    this.speed -= 5;
+    return this;
+  }
+}
+
+const car = new Car();
+car.accelerate().accelerate().brake(); // Method chaining
+</code></pre>
+<ol start="41">
+<li>What is IIFE (Immediately Invoked Function Expression)?
+An IIFE is a function that runs as soon as it is defined. It is used to create a new scope and avoid polluting the global scope.</li>
+</ol>
+<p>javascript
+Copy code</p>
+<pre><code class="language-js">(function () {
+  console.log(&quot;IIFE runs immediately&quot;);
+})();
+</code></pre>
+<ol start="42">
+<li>What is Currying function?
+Currying is the process of transforming a function with multiple arguments into a sequence of functions that each take a single argument.</li>
+</ol>
+<p>javascript
+Copy code</p>
+<pre><code class="language-js">const add = (a) =&gt; (b) =&gt; a + b;
+const addFive = add(5);
+console.log(addFive(3)); // 8
+</code></pre>
+<ol start="43">
+<li>
+<p>What is recursion? When is the use of recursion useful in Javascript?
+Recursion is a technique where a function calls itself. It is useful for tasks that can be divided into similar subtasks, such as tree traversal and factorial calculation.</p>
+</li>
+<li>
+<p>What is the definition of a higher-order function?
+A higher-order function is a function that takes other functions as arguments or returns a function as a result. Examples include map(), filter(), and reduce().</p>
+</li>
+<li>
+<p>Explain the difference between: <code>function Person(){}, var person = Person()</code>, and <code>var person = new Person()</code>?
+<code>function Person() {}</code>: Defines a function.
+<code>var person = Person()</code>: Invokes the Person function, assigning its return value to person.
+<code>var person = new Person()</code>: Creates a new instance of the Person object using the constructor function.</p>
+</li>
+<li>
+<p>Explain the differences on the usage of foo between <code>function foo() {}</code> and <code>var foo = function() {}</code>?
+<code> function foo() {}</code>: Function declaration, hoisted.
+<code>var foo = function() {}</code>: Function expression, not hoisted.</p>
+</li>
+<li>
+<p>Explain the concept of this in JavaScript. Can you give an example of one of the ways that working with this has changed in ES6?
+this refers to the context in which a function is called. In ES6, arrow functions do not have their own this binding; they inherit it from the enclosing lexical context.</p>
+</li>
+</ol>
+<p>javascript
+Copy code</p>
+<pre><code class="language-js">function Person() {
+  this.age = 0;
+  setInterval(() =&gt; {
+    this.age++; // `this` refers to the Person instance
+  }, 1000);
+}
+</code></pre>
+<ol start="48">
+<li>
+<p>What is the difference between host objects and native objects?
+Host objects: Provided by the environment (e.g., browser-specific objects like window, document).
+Native objects: Defined by the ECMAScript specification (e.g., Object, Array). 49. Explain Function.prototype.bind. What is context lossing, when does it happen, and how can it be prevented?
+bind creates a new function with a specified this value and arguments. Context loss occurs when this is lost, often in callbacks. Using bind can prevent this by explicitly setting the context.</p>
+</li>
+<li>
+<p>Can you explain what Function.call and Function.apply do? What is the notable difference between the two?
+call: Invokes a function with a specified this value and arguments provided individually.
+apply: Invokes a function with a specified this value and arguments provided as an array.</p>
+</li>
+<li>
+<p>What is the problem throttling and debouncing are resolved? What is the core difference between them?
+Throttling limits the number of times a function can execute over time. Debouncing ensures a function is only called once after a specified delay after it stops being invoked. Both address performance issues with repeated function calls.</p>
+</li>
+<li>
+<p>Give an example of a function with memoization. When should this technique be used?
+Memoization caches function results to optimize performance for expensive operations. Use it for functions with repetitive calls and predictable results.</p>
+</li>
+</ol>
+<p>javascript
+Copy code</p>
+<pre><code class="language-js">const memoize = (fn) =&gt; {
+  const cache = {};
+  return (...args) =&gt; {
+    const key = JSON.stringify(args);
+    if (!cache[key]) {
+      cache[key] = fn(...args);
+    }
+    return cache[key];
+  };
+};
+</code></pre>
+<ol start="53">
+<li>
+<p>What are the differences between ES6 class and ES5 function constructors?
+ES6 class: Syntactic sugar over prototypes, clearer and more concise syntax.
+ES5 function constructors: Uses functions and prototype chaining, more verbose.</p>
+</li>
+<li>
+<p>What are closures and how do they work?
+Closures are functions that retain access to their lexical scope even when executed outside that scope. They enable private variables and persistent state.</p>
+</li>
+<li>
+<p>Explain hoisting.
+Hoisting is JavaScript&#x27;s behavior of moving variable and function declarations to the top of their containing scope during the compile phase. This means functions and variables can be used before they are declared.</p>
+</li>
+<li>
+<p>What is temporal dead zone?
+The temporal dead zone (TDZ) is the time between entering a block scope and the point where a variable declared with let or const is initialized. Accessing the variable in this period throws a ReferenceError.</p>
+</li>
+<li>
+<p>How does prototypal inheritance work?
+Prototypal inheritance allows objects to inherit properties and methods from other objects. Objects are linked via their prototype, enabling shared behavior.</p>
+</li>
+<li>
+<p>Is it possible to write new <code>properties / functions</code> in prototypes of standard classes (Array, Object, etc.)? Why not? In what cases can this be done? How to protect yourself if you need to expand the prototype?
+While possible, modifying prototypes of standard classes is discouraged due to potential conflicts and unpredictable behavior. Use caution and ensure compatibility by checking for existing properties.</p>
+</li>
+<li>
+<p>Explain the difference between synchronous and asynchronous functions.
+Synchronous functions: Block execution until they complete.
+Asynchronous functions: Do not block execution; use callbacks, promises, or <code>async/await</code> for handling results.</p>
+</li>
+<li>
+<p>What is event loop?
+The event loop is a mechanism that manages the execution of asynchronous code in JavaScript, ensuring non-blocking behavior by handling events and callbacks in a loop. Resources: <code>https://www.youtube.com/watch?v=eiC58R16hb8</code></p>
+</li>
+<li>
+<p>What is the difference between call stack and task queue?
+Call stack: Manages the execution of function calls.
+Task queue: Holds asynchronous tasks to be executed after the current call stack is empty.</p>
+</li>
+<li>
+<p>What is the difference between Observable and Promise?
+Observable: Represents multiple values over time, can be canceled, and has operators for processing streams.
+Promise: Represents a single value at a future point in time, cannot be canceled.</p>
+</li>
+<li>
+<p>Explain how Promises work in JavaScript (methods all, allSettled, race, any)
+Promises: Represent an eventual completion (or failure) of an asynchronous operation.
+all: Resolves when all promises resolve, or rejects if any promise rejects.
+allSettled: Resolves when all promises settle (either resolve or reject).
+race: <code>Resolves/rejects</code> as soon as one promise <code>resolves/rejects</code>.
+any: Resolves as soon as any promise resolves, or rejects if all promises reject.</p>
+</li>
+<li>
+<p>What is the extent of your experience with Promises <code>and/or</code> their polyfills?
+Promises are fundamental in modern JavaScript for handling asynchronous operations. Polyfills like babel-polyfill can ensure compatibility in older environments.</p>
+</li>
+<li>
+<p>What are the pros and cons of using Promises instead of callbacks?
+Pros: Better readability, easier error handling, chaining for sequential operations. Cons: Slightly more complex syntax for beginners, potential overuse leading to &quot;promise hell.&quot;</p>
+</li>
+<li>
+<p>How would you handle errors in <code>async/await</code>?
+Use <code>try...catch</code> blocks to handle errors in <code>async/await</code>:</p>
+</li>
+</ol>
+<p>javascript
+Copy code</p>
+<pre><code class="language-js">async function fetchData() {
+  try {
+    const response = await fetch(&quot;url&quot;);
+    const data = await response.json();
+  } catch (error) {
+    console.error(error);
+  }
+}
+</code></pre>
+<ol start="67">
+<li>
+<p>Explain Ajax in as much detail as possible. What are the advantages and disadvantages of using Ajax?
+Ajax (Asynchronous JavaScript and XML) enables asynchronous data retrieval without refreshing the page. Advantages: Improved user experience, partial page updates. Disadvantages: Complexity, browser compatibility issues, can increase server load.</p>
+</li>
+<li>
+<p>Explain how JSONP works (and how it&#x27;s not really Ajax).
+JSONP (JSON with Padding) allows cross-domain requests by embedding script tags. It is not true Ajax since it uses <code>&lt;script&gt;</code> for data fetching, lacking XHR features.</p>
+</li>
+<li>
+<p>What is JSON and how to work with it in JavaScript?
+JSON (JavaScript Object Notation) is a lightweight data-interchange format. Use JSON.stringify() to convert objects to JSON strings, and JSON.parse() to parse JSON strings into objects.</p>
+</li>
+<li>
+<p>What are JSON and XML and how do they differ in use?
+JSON is lightweight, easy to <code>read/write</code>, and integrates seamlessly with JavaScript. XML is verbose, supports attributes and complex structures, and is used in legacy systems.</p>
+</li>
+<li>
+<p>Explain event delegation.
+Event delegation involves attaching a single event listener to a parent element to manage events for its children, leveraging event bubbling.</p>
+</li>
+<li>
+<p>Describe event bubbling.
+Event bubbling is the process where an event propagates from the target element up through the DOM hierarchy, triggering handlers on ancestors.</p>
+</li>
+<li>
+<p>Describe event capturing.
+Event capturing (or trickling) is the phase where an event propagates from the root to the target element. It&#x27;s the opposite of bubbling.</p>
+</li>
+<li>
+<p>What is the difference between <code>event.target</code> and <code>event.currentTarget</code>?
+<code>event.target</code>: The element that triggered the event.
+<code>event.currentTarget</code>: The element to which the event handler is attached.</p>
+</li>
+<li>
+<p>What is the difference between <code>event.preventDefault()</code> and <code>event.stopPropagation()</code>?
+<code>event.preventDefault()</code>: Prevents the default action associated with the event.
+<code>event.stopPropagation()</code>: Stops the event from bubbling or capturing.</p>
+</li>
+<li>
+<p>EventEmitter js and custom events
+EventEmitter is a pattern for handling custom events. In JavaScript, it is implemented using EventEmitter in <code>Node.js</code> or custom event systems in browsers.</p>
+</li>
+<li>
+<p>How does<code> boxing</code> and <code>unboxing</code> work in JavaScript?
+Boxing wraps primitive values in object wrappers (Number, String, etc.). Unboxing extracts the primitive value from the wrapper.</p>
+</li>
+<li>
+<p>What ways do you know to detect whether an element is in the user&#x27;s viewport?
+getBoundingClientRect()
+Intersection Observer API</p>
+</li>
+<li>
+<p>When would you use <code>document.write()</code>?
+Use <code>document.write()</code> for debugging or inserting content during initial page load. It&#x27;s generally avoided due to potential issues with existing content.</p>
+</li>
+<li>
+<p>Difference between document load event and document DOMContentLoaded event?
+load: Fired when the entire page, including resources, is loaded.
+DOMContentLoaded: Fired when the HTML is fully loaded and parsed, without waiting for resources.</p>
+</li>
+<li>
+<p>Why would you use something like the load event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
+Use the load event to ensure all resources are loaded. Disadvantages include delayed execution. Alternatives include DOMContentLoaded for faster interaction or IntersectionObserver for specific resource tracking.</p>
+</li>
+<li>
+<p>What is the difference between feature detection, feature inference, and using the UA string?
+Feature detection: Checking if a feature exists in the browser (e.g., if (&#x27;geolocation&#x27; in navigator)).
+Feature inference: Assuming features based on other known features.
+UA string: Using the user agent string to infer browser capabilities, less reliable.</p>
+</li>
+<li>
+<p>Discuss how you might use Object Oriented Programming (OOP) principles when coding with JavaScript. (inheritance, encapsulation, abstraction, polymorphism)
+OOP in JavaScript involves creating classes and objects to model real-world entities. Use inheritance for shared behavior, encapsulation for hiding implementation details, abstraction for defining interfaces, and polymorphism for different implementations.</p>
+</li>
+<li>
+<p>What patterns do you know and successfully use in JavaScript?
+Singleton: Ensures a class has only one instance.
+Module: Encapsulates related functions and variables.
+Observer: Manages subscription and notification of events.
+Factory: Creates objects without specifying the exact class.</p>
+</li>
+<li>
+<p>Implementation of the Class Free OOP pattern
+Refer to observablehq.com for implementation details.</p>
+</li>
+<li>
+<p>Implementation of Async Disposer pattern
+Refer to advancedweb.hu for implementation details.</p>
+</li>
+<li>
+<p>Why you might want to create static class members?
+Static members belong to the class itself, not instances. Use them for utility functions or shared data that doesn&#x27;t change per instance.</p>
+</li>
+<li>
+<p>What is the purpose of creating an abstract class?
+Abstract classes cannot be instantiated directly. They define common behavior and must be subclassed, ensuring derived classes implement specific methods.</p>
+</li>
+<li>
+<p>Why is the Proxy constructor needed? Give an example of use.
+Proxy is used to intercept and customize operations on objects (e.g., property access, assignment). Example: Logging property accesses.</p>
+</li>
+</ol>
+<p>javascript
+Copy code</p>
+<pre><code class="language-js">const handler = {
+  get: (target, prop) =&gt; {
+    console.log(`Property ${prop} accessed`);
+    return target[prop];
+  },
+};
+const proxy = new Proxy({}, handler);
+proxy.a = 10;
+console.log(proxy.a);
+</code></pre>
+<ol start="90">
+<li>
+<p>What is an ArrayBuffer? What is the difference between Uint32Array and Float32Array? What is the result of executing the code?
+ArrayBuffer represents a fixed-length raw binary data buffer. Uint32Array stores unsigned 32-bit integers, Float32Array stores 32-bit floating-point numbers. The result of execution depends on the context provided.</p>
+</li>
+<li>
+<p>What tools and techniques do you use debugging JavaScript code?
+Developer tools: Console, breakpoints, step-through debugging.
+Linters: ESLint.
+Testing frameworks: Jest, Mocha.
+Debugging techniques: Logging, <code>try...catch</code>.</p>
+</li>
+<li>
+<p>What is Javascript source maps?
+Source maps map compiled code back to its original source code, aiding debugging by showing the original code in developer tools.</p>
+</li>
+<li>
+<p>How can you share code between files?
+<code>Modules</code>: import and export (ES6).
+<code>CommonJS</code>: require and module.exports.
+<code>AMD/UMD</code>: For asynchronous module loading.</p>
+</li>
+<li>
+<p>What is <code>CJS (Commonjs), AMD/UMD, ESM</code>? And what is the difference between them?
+CJS (CommonJS): Synchronous module system used in Node.js.
+AMD (Asynchronous Module Definition): Asynchronous module system for browsers.
+UMD (Universal Module Definition): Works with both CJS and AMD.
+ESM (ES Modules): Standardized module system in ES6, uses <code>import/export</code>.</p>
+</li>
+<li>
+<p>What is NPM and Yarn? What are the differences?
+NPM: Default package manager for Node.js. Yarn: Alternative package manager, faster installs, and deterministic lock files.</p>
+</li>
+<li>
+<p>Explain synchronous module definition
+Synchronous module definition loads modules synchronously, blocking execution until dependencies are resolved. Used in CJS.</p>
+</li>
+<li>
+<p>How to define and use types in TypeScript?
+Define types using interfaces, type aliases, or enums. Use them to ensure type safety in variables, functions, and classes.</p>
+</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-js">interface User {
+  name: string;
+  age: number;
+}
+
+const user: User = { name: &quot;John&quot;, age: 30 };
+</code></pre>
+<ol start="98">
+<li>
+<p>Tell about Interface Oriented Programming in TS.
+Interface-oriented programming focuses on defining interfaces to establish contracts for objects. It emphasizes the use of interfaces over concrete implementations.</p>
+</li>
+<li>
+<p>What is duck typing in TypeScript? Provide a code example.
+Duck typing allows objects to be used based on their shape rather than explicit type definitions.</p>
+</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">interface CanSwim {
+  swim(): void;
+}
+
+const swimmer: CanSwim = { swim: () =&gt; console.log(&quot;Swimming&quot;) };
+</code></pre></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/pathliving/front-end-interview-questions/docs/answers/javascript.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/answers/css"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">CSS</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/answers/typescript"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Typecript</div></a></nav></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/questions/html">Questions</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/questions/html">Answers</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/pathliving/front-end-interview-questions" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Front-end interview questions, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

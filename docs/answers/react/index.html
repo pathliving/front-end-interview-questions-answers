@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-answers/react" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.4.0">
+<title data-rh="true">React (questions prepared) | Front-end interview questions</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/docs/answers/react"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="React (questions prepared) | Front-end interview questions"><meta data-rh="true" name="description" content="1. What is JSX?"><meta data-rh="true" property="og:description" content="1. What is JSX?"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/docs/answers/react"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/answers/react" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/answers/react" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.70ff24a8.css">
+<script src="/assets/js/runtime~main.cf51990d.js" defer="defer"></script>
+<script src="/assets/js/main.3abde22a.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="Front-end Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="Front-end Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Front-end</b></a><a class="navbar__item navbar__link" href="/docs/questions/html">Questions</a><a class="navbar__item navbar__link" href="/docs/answers/html">Answers</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/pathliving/front-end-interview-questions" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro">Intro</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/resources">Resources</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/todo">TODO</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/questions/html">Questions</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/html">HTML</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/css">CSS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/javascript">Javascript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/typescript">Typecript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/react">React</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/testing">Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/fundamentals">Fundamentals</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/a11y">A11Y</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/answers/html">Answers</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/html">HTML</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/css">CSS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/javascript">Javascript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/typescript">Typecript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/answers/react">React</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/testing">Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/fundamentals">Fundamentals</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/a11y">A11Y</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Answers</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">React</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1 id="react-questions-prepared">React (questions prepared)</h1>
+<h3 id="1-what-is-jsx">1. What is <code>JSX</code>?</h3>
+<p>Answer
+JSX stands for JavaScript XML and it is an XML-like syntax extension to ECMAScript. Basically it just provides the syntactic sugar for the <code>React.createElement(type, props, ...children)</code> function, giving us expressiveness of JavaScript along with HTML like template syntax.</p>
+<h3 id="2-what-is-strict-mode-in-react-what-is-the-benefit-of-strict-mode-why-does-strict-mode-render-twice-in-react">2. What is <code>strict mode</code> in React? What is the benefit of strict mode? Why does strict mode render twice in React?</h3>
+<p>Answer
+<code>React StrictMode</code> is a useful component for highlighting potential problems in an application. Just like <code>&lt;Fragment&gt;&lt;/Fragment&gt;</code>, <code>&lt;StrictMode&gt;&lt;/StrictMode&gt;</code> does not render any extra DOM elements. It activates additional checks and warnings for its descendants. These checks apply for development mode only.</p>
+<h3 id="3-what-is-the-difference-between-element-and-component">3. What is the difference between <code>Element</code> and <code>Component</code>?</h3>
+<p>Answer
+An <code>Element</code> is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. Elements can contain other Elements in their props. Creating a React element is cheap using React.createElement(). Once an element is created, it cannot be mutated.<br>
+Whereas a <code>component</code> can be declared in several different ways. It can be a class with a render() method or it can be defined as a function. In either case, it takes props as an input, and returns a JSX tree as the output.</p>
+<h3 id="-4-what-are-controlled-and-uncontrolled-components">❗❗❗ 4. What are <code>controlled</code> and <code>uncontrolled</code> components?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="5-what-are-pure-components">5. What are <code>Pure Components</code>?</h3>
+<p>Answer
+<code>Pure components</code> are the components which render the same output for the same state and props. In <code>function components</code>, you can achieve these pure components through memoized <code>React.memo()</code> API wrapping around the component. This API prevents unnecessary re-renders by comparing the previous props and new props using shallow comparison. So it will be helpful for performance optimizations.<br>
+But at the same time, it won&#x27;t compare the previous state with the current state because function component itself prevents the unnecessary rendering by default when you set the same state again.<br>
+In <code>class components</code>, the components extending <code>React.PureComponent</code> instead of <code>React.Component</code> become the pure components. When props or state changes, PureComponent will do a shallow comparison on both props and state by invoking shouldComponentUpdate() lifecycle method.</p>
+<h3 id="6-what-are-the-problems-of-using-render-props-with-pure-components">6. What are the problems of using <code>render props</code> with pure components?</h3>
+<p>Answer
+If you create a function inside a render method, it negates the purpose of pure component. Because the shallow prop comparison will always return false for new props, and each render in this case will generate a new value for the render prop. You can solve this issue by defining the render function as instance method.</p>
+<h3 id="7--explain-the-difference-between-functional-and-class-components-what-are-react-hooks-and-how-do-they-differ-from-class-based-components">7. ❗❗❗ Explain the difference between <code>functional</code> and <code>class components</code>. What are React hooks and how do they differ from class-based components?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="8-what-are-stateless-components">8. What are <code>stateless</code> components?</h3>
+<p>Answer
+If the behaviour of a component is independent of its state then it can be a stateless component. You can use either a function or a class for creating stateless components. But unless you need to use a lifecycle hook in your components, you should go for function components. There are a lot of benefits if you decide to use function components here; they are easy to write, understand, and test, a little faster, and you can avoid the <code>this</code> keyword altogether.</p>
+<h3 id="9-what-are-stateful-components">9. What are <code>stateful</code> components?</h3>
+<p>Answer
+If the behaviour of a component is dependent on the state of the component then it can be termed as stateful component. These stateful components are either function components with hooks or class components.</p>
+<h3 id="10-what-is-the-difference-between-html-and-react-event-handling-what-are-synthetic-events-in-react">10. What is the difference between HTML and React <code>event handling</code>? What are <code>synthetic events</code> in React?</h3>
+<p>Answer
+<strong><code>Event handling</code></strong>:<br>
+<strong>a)</strong> In HTML, the event name usually represents in lowercase as a convention <code>&lt;button onclick=&quot;activateLasers()&quot;&gt;&lt;/button&gt;</code>. Whereas in React it follows camelCase convention <code>&lt;button onClick={activateLasers}&gt;</code>.<br>
+<strong>b)</strong> In HTML, you can return false to prevent default behavior <code>&lt;a href=&quot;#&quot; onclick=&#x27;console.log(&quot;The link was clicked.&quot;); return false;&#x27; /&gt;</code>. Whereas in React you must call preventDefault() explicitly <code>function handleClick(event) { event.preventDefault(); console.log(&quot;The link was clicked.&quot;)}</code>.<br>
+<strong><code>SyntheticEvent</code></strong> is a cross-browser wrapper around the browser&#x27;s native event. Its API is same as the browser&#x27;s native event, including <code>stopPropagation()</code> and <code>preventDefault()</code>, except the events work identically across all browsers. The native events can be accessed directly from synthetic events using nativeEvent attribute.</p>
+<h3 id="11-what-is-virtual-dom-or-vdom">11. What is <code>virtual DOM</code> or <code>vdom</code></h3>
+<p>Answer
+<strong>The Virtual DOM (VDOM)</strong> is an in-memory representation of Real DOM. The representation of a UI is kept in memory and synced with the &quot;real&quot; DOM. It&#x27;s a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called reconciliation.<br>
+<strong>The Virtual DOM works</strong> in three simple steps:<br>
+<strong>a)</strong> Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.<br>
+<strong>b)</strong> Then the difference between the previous DOM representation and the new one is calculated.<br>
+<strong>c)</strong> Once the calculations are done, the real DOM will be updated with only the things that have actually changed. Resources: a)<a href="https://github.com/sudheerj/reactjs-interview-questions?tab=readme-ov-file#what-is-virtual-dom">https://github.com/sudheerj/reactjs-interview-questions?tab=readme-ov-file#what-is-virtual-dom</a> b)<a href="https://legacy.reactjs.org/docs/reconciliation.html">https://legacy.reactjs.org/docs/reconciliation.html</a></p>
+<h3 id="12-what-is-the-diffrence-between-virtual-dom-vs-shadow-dom">12. What is the diffrence between <code>Virtual DOM</code> vs <code>Shadow DOM</code>?</h3>
+<p>Answer
+The Shadow DOM is a browser technology designed primarily for scoping variables and CSS in web components. The Virtual DOM is a concept implemented by libraries in JavaScript on top of browser APIs.</p>
+<h3 id="13-what-is-react-fiber">13. What is React Fiber?</h3>
+<p>Answer
+Fiber is the new reconciliation engine or reimplementation of core algorithm in React v16. The goal of React Fiber is to increase its suitability for areas like animation, layout, gestures, ability to pause, abort, or reuse work and assign priority to different types of updates; and new concurrency primitives. The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.</p>
+<h3 id="14-what-is-the-difference-between-imperative-and-declarative-in-react">14. What is the difference between <code>Imperative</code> and <code>Declarative</code> in React?</h3>
+<p>Answer
+Imagine a simple UI component, such as a &quot;Like&quot; button. When you tap it, it turns blue if it was previously grey, and grey if it was previously blue.</p>
+<p>The imperative way of doing this would be:</p>
+<pre><code class="language-js">if (user.likes()) {
+  if (hasBlue()) {
+    removeBlue();
+    addGrey();
+  } else {
+    removeGrey();
+    addBlue();
+  }
+}
+</code></pre>
+<p>Basically, you have to check what is currently on the screen and handle all the changes necessary to redraw it with the current state, including undoing the changes from the previous state. You can imagine how complex this could be in a real-world scenario.</p>
+<p>In contrast, the declarative approach would be:</p>
+<pre><code class="language-js">if (this.state.liked) {
+  return &lt;blueLike /&gt;;
+} else {
+  return &lt;greyLike /&gt;;
+}
+</code></pre>
+<p>Because the declarative approach separates concerns, this part of it only needs to handle how the UI should look in a sepecific state, and is therefore much simpler to understand.</p>
+<h3 id="15-what-is-the-difference-between-createelement-and-cloneelement">15. What is the difference between <code>createElement</code> and <code>cloneElement</code>?</h3>
+<p>Answer
+JSX elements will be transpiled to React.createElement() functions to create React elements which are going to be used for the object representation of UI. Whereas cloneElement is used to clone an element and pass it new props.</p>
+<h3 id="16-what-is-lifting-state-up-in-react">16. What is <code>Lifting State Up</code> in React?</h3>
+<p>Answer
+When several components need to share the same changing data then it is recommended to lift the shared state up to their closest common ancestor. That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.</p>
+<h3 id="17-what-is-the-purpose-of-displayname-class-property">17. What is the purpose of <code>displayName</code> class property?</h3>
+<p>Answer
+The <code>displayName</code> string is used in debugging messages. Usually, you don’t need to set it explicitly because it’s inferred from the name of the function or class that defines the component. You might want to set it explicitly if you want to display a different name for debugging purposes or when you create a higher-order component.</p>
+<h3 id="19-what-is-children-prop">19. What is <code>children prop</code>?</h3>
+<p>Answer
+<code>Children</code> is a prop that allows you to pass components as data to other components, just like any other prop you use. Component tree put between component&#x27;s opening and closing tag will be passed to that component as children prop.</p>
+<h3 id="21-why-react-uses-classname-over-class-attribute">21. Why React uses <code>className</code> over class attribute?</h3>
+<p>Answer
+The attribute names written in JSX turned into keys of JavaScript objects and the JavaScript names cannot contain dashes or reversed words, it is recommended to use camelCase whereever applicable in JSX code. The attribute class is a keyword in JavaScript, and JSX is an extension of JavaScript. That&#x27;s the principle reason why React uses className instead of class. Pass a string as the className prop.</p>
+<h3 id="22-what-are-fragments">22. What are <code>fragments</code>?</h3>
+<p>Answer
+It&#x27;s a common pattern or practice in React for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM. You need to use either or a shorter syntax having empty tag (<!-- -->).</p>
+<h3 id="23-why-we-need-a-react-portals">23. Why we need a <code>React portals</code>?</h3>
+<p>Answer
+Portal is a recommended way to render children into a DOM node that exists outside the DOM hierarchy of the parent component. When using CSS transform in a component, its descendant elements should not use fixed positioning, otherwise the layout will blow up. <code>ReactDOM.createPortal(child, container);</code> The first argument is any render-able React child, such as an element, string, or fragment. The second argument is a DOM element.</p>
+<h3 id="24-why-we-need-refs">24. Why we need <code>refs</code>?</h3>
+<p>Answer
+There are few use cases to go for refs:<br>
+<strong>a)</strong> Managing focus, text selection, or media playback.<br>
+<strong>b)</strong> Triggering imperative animations.<br>
+<strong>c)</strong> Integrating with third-party DOM libraries.</p>
+<h3 id="-25-what-the-difference-between-createref-і-useref">❗❗❗ 25. What the difference between <code>createRef</code> і <code>useRef</code>?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="26-what-is-the-difference-between-usestate-and-useref-hook">26. What is the difference between <code>useState</code> and <code>useRef</code> hook?</h3>
+<p>Answer
+<strong>a)</strong> useState causes components to re-render after state updates whereas useRef doesn’t cause a component to re-render when the value or state changes. Essentially, useRef is like a “box” that can hold a mutable value in its (.current) property.<br>
+<strong>b)</strong> useState allows us to update the state inside components. While useRef allows referencing DOM elements.</p>
+<h3 id="27-what-is-the-use-of-react-dom-package">27. What is the use of <code>react-dom</code> package?</h3>
+<p>Answer
+The react-dom package provides DOM-specific methods that can be used at the top level of your app. Most of the components are not required to use this module. Some of the methods of this package are:<br>
+<strong>a)</strong> render()<br>
+<strong>b)</strong> hydrate()<br>
+<strong>c)</strong> unmountComponentAtNode()<br>
+<strong>d)</strong> findDOMNode()<br>
+<strong>e)</strong> createPortal()</p>
+<h3 id="28-what-is-reactdomserver">28. What is <code>ReactDOMServer</code>?</h3>
+<p>Answer
+The ReactDOMServer object enables you to render components to static markup (typically used on node server). This object is mainly used for server-side rendering (SSR). The following methods can be used in both the server and browser environments:<br>
+<strong>a)</strong> renderToString()<br>
+<strong>b)</strong> renderToStaticMarkup()<br>
+<strong>c)</strong> renderToPipeableStream. Resources: <a href="https://react.dev/reference/react-dom/server">https://react.dev/reference/react-dom/server</a></p>
+<h3 id="29-what-is-the-difference-between-react-and-reactdom">29. What is the difference between <code>React</code> and <code>ReactDOM</code>?</h3>
+<p>Answer
+The <code>react</code> package contains <code>React.createElement()</code>, <code>React.Component</code>, <code>React.Children</code>, and other helpers related to <code>elements</code> and <code>component classes</code>. You can think of these as the <code>isomorphic</code> or <code>universal</code> helpers that you need to build components. The <code>react-dom</code> package contains <code>ReactDOM.render()</code>, and in <code>react-dom/server</code> we have server-side rendering support with <code>ReactDOMServer.renderToString()</code>, <code>ReactDOMServer.renderToStaticMarkup()</code> and other methods.</p>
+<h3 id="30-why-reactdom-is-separated-from-react">30. Why <code>ReactDOM</code> is separated from <code>React</code>?</h3>
+<p>Answer
+The React team worked on extracting all DOM-related features into a separate library called ReactDOM. React v0.14 is the first release in which the libraries are split. By looking at some of the packages, <code>react-native</code>, <code>react-art</code>, <code>react-canvas</code>, and <code>react-three</code>, it has become clear that the beauty and essence of React has nothing to do with browsers or the DOM.<br>
+To build more environments that React can render to, React team planned to split the main React package into two: <code>react</code> and <code>react-dom</code>. This paves the way to writing components that can be shared between the web version of <code>React</code> and <code>React Native</code>.</p>
+<h3 id="18-what-are-higher-order-components">18. What are <code>Higher-Order components</code>?</h3>
+<p>Answer
+A <code>higher-order component (HOC)</code> is a function that takes a component and returns a new component. Basically, it&#x27;s a pattern that is derived from React&#x27;s compositional nature. HOC can be used for many use cases:<br>
+<strong>a)</strong> Code reuse, logic and bootstrap abstraction.<br>
+<strong>b)</strong> Render hijacking.<br>
+<strong>c)</strong> State abstraction and manipulation.<br>
+<strong>d)</strong> Props manipulation.</p>
+<h3 id="31-do-hooks-replace-render-props-and-higher-order-components">31. Do <code>hooks</code> replace render props and <code>higher-order components</code>?</h3>
+<p>Answer
+Both render props and higher-order components render only a single child but in most of the cases Hooks are a simpler way to serve this by reducing nesting in your tree.</p>
+<h3 id="33-how-jsx-prevents-injection-attacks">33. How JSX prevents <code>Injection Attacks</code>?</h3>
+<p>Answer
+React DOM escapes any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that’s not explicitly written in your application. Everything is converted to a string before being rendered.</p>
+<h3 id="34-why-should-component-names-start-with-capital-letter">34. Why should component names start with capital letter?</h3>
+<p>Answer
+If you are rendering your component using JSX, the name of that component has to begin with a capital letter otherwise React will throw an error as an unrecognized tag. This convention is because only HTML elements and SVG tags can begin with a lowercase letter.</p>
+<h3 id="35-what-is-concurrent-rendering">35. What is <code>Concurrent Rendering</code>?</h3>
+<p>Answer
+The Concurrent rendering makes React apps to be more responsive by rendering component trees without blocking the main UI thread. It allows React to interrupt a long-running render to handle a high-priority event. i.e, When you enabled concurrent Mode, React will keep an eye on other tasks that need to be done, and if there&#x27;s something with a higher priority it will pause what it is currently rendering and let the other task finish first.</p>
+<h3 id="36-what-is-the-difference-between-async-mode-and-concurrent-mode">36. What is the difference between <code>async mode</code> and <code>concurrent mode</code>?</h3>
+<p>Answer
+Both refers the same thing. Previously <code>concurrent Mode</code> being referred to as <code>Async Mode</code> by React team. The name has been changed to highlight React’s ability to perform work on different priority levels. So it avoids the confusion from other approaches to Async Rendering.</p>
+<h3 id="37-how-does-react-batch-multiple-state-updates">37. How does React batch multiple state updates?</h3>
+<p>Answer
+React prevents component from re-rendering for each and every state update by grouping multiple state updates within an event handler. This strategy improves the application performance and this process known as batching. The older version of React only supported <code>batching</code> for browser events whereas React18 supported for asynchronous actions, timeouts and intervals along with native events. This improved version of batching is called <code>automatic batching</code>.</p>
+<h3 id="38-is-it-possible-to-prevent-automatic-batching">38. Is it possible to prevent automatic batching?</h3>
+<p>Answer
+Yes, it is possible to prevent automatic batching default behavior. There might be cases where you need to re-render your component after each state update or updating one state depends on another state variable. Considering this situation, React introduced <code>flushSync</code> method from <code>react-dom</code> API for the usecases where you need to flush state updates to DOM immediately.</p>
+<h3 id="39-what-is-react-hydration">39. What is React hydration?</h3>
+<p>Answer
+React hydration is used to add client-side JavaScript interactivity to pre-rendered static HTML generated by the server. It is used only for server-side rendering(SSR) to enhance the initial rendering time and make it SEO friendly application. This hydration acts as a bridge to reduce the gap between server side and client-side rendering.
+After the page loaded with generated static HTML, React will add application state and interactivity by attaching all event handlers for the respective elements.</p>
+<h3 id="40-the-rule-of-hooks-what-conditions-must-a-function-meet-to-be-a-hook">40. The <code>rule of hooks</code>? What conditions must a function meet to be a hook?</h3>
+<p>Answer
+You need to follow two rules in order to use hooks, <strong>a)</strong> Call Hooks only at the top level of your react functions: You should always use hooks at the top level of react function before any early returns. i.e, You shouldn’t call Hooks inside loops, conditions (if you want to use it with conditions you need to move out it into custom hook), or nested functions. This will ensure that Hooks are called in the same order each time a component renders and it preserves the state of Hooks between multiple re-renders due to useState and useEffect calls.
+<strong>b)</strong> Call Hooks from React Functions only: You shouldn’t call Hooks from regular JavaScript functions or class components. Instead, you should call them from either function components or custom hooks.
+Resource: <a href="https://react.dev/reference/rules/rules-of-hooks">https://react.dev/reference/rules/rules-of-hooks</a></p>
+<h3 id="41-the-rules-of-react">41. The <code>rules of React</code>?</h3>
+<p>Answer
+Resource: <a href="https://react.dev/reference/rules">https://react.dev/reference/rules</a></p>
+<h3 id="41--explain-what-is-happening-in-this-code-and-in-what-scenarios-it-might-be-useful">41. ❗❗❗ Explain what is happening in this code and in what scenarios it might be useful:</h3>
+<pre><code class="language-js">const useHandler = (f) =&gt; {
+  const ref = React.useRef(f);
+  ref.current = f;
+  return React.useCallback((...args) =&gt; ref.current(...args), []);
+};
+</code></pre>
+<p>Answer
+Placeholder</p>
+<h3 id="43--what-is-cleanup-function-in-react-hooks">43. ❗❗❗ What is <code>cleanup function</code> in React hooks?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="44--what-hooks-do-you-know-usestate-useeffect-usecallback-usememo-usecontext-uselayouteffect-usereducer-useref-usedebugvalue-usedeferredvalue-useid-useimperativehandle-useinsertioneffect-usesyncexternalstore-usetransition-useoptimistic-useactionstate-useformstatus">44. ❗❗❗ What hooks do you know? (<code>useState, useEffect, useCallback, useMemo, useContext, useLayoutEffect, useReducer, useRef, useDebugValue, useDeferredValue, useId, useImperativeHandle, useInsertionEffect, useSyncExternalStore, useTransition, useOptimistic, useActionState, useFormStatus</code>)</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="42--how-does-the-usedeferredvalue-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useDeferredValue</code> hook work? Provide an example.</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="42--how-does-the-usetransition-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useTransition</code> hook work? Provide an example.</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="42--how-does-the-usedebugvalue-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useDebugValue</code> hook work? Provide an example.</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="42--how-does-the-useimperativehandle-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useImperativeHandle</code> hook work? Provide an example.</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="42--how-does-the-useinsertioneffect-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useInsertionEffect</code> hook work? Provide an example.</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="42--how-does-the-usesyncexternalstore-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useSyncExternalStore</code> hook work? Provide an example.</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="42--how-does-the-useoptimistic-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useOptimistic</code> hook work? Provide an example.</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="42--how-does-the-useactionstate-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useActionState</code> hook work? Provide an example.</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="42--how-does-the-useformstatus-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useFormStatus</code> hook work? Provide an example.</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="45-what-is-the-difference-between-uselayouteffect-and-useeffect-in-which-cases-do-you-use-which">45. What is the difference between <code>useLayoutEffect</code> and <code>useEffect</code>, in which cases do you use which?</h3>
+<p>Answer
+useEffect and useLayoutEffect are both React hooks that can be used to synchronize a component with an external system, such as a browser API or a third-party library. However, there are some key differences between the two:</p>
+<p><strong>a)</strong> Timing: useEffect runs after the browser has finished painting, while useLayoutEffect runs synchronously before the browser paints. This means that useLayoutEffect can be used to measure and update layout in a way that feels more synchronous to the user.<br>
+<strong>b)</strong> Browser Paint: useEffect allows browser to paint the changes before running the effect, hence it may cause some visual flicker. useLayoutEffect synchronously runs the effect before browser paints and hence it will avoid visual flicker.<br>
+<strong>c)</strong> Execution Order: The order in which multiple useEffect hooks are executed is determined by React and may not be predictable. However, the order in which multiple useLayoutEffect hooks are executed is determined by the order in which they were called.<br>
+<strong>d)</strong> Error handling: useEffect has a built-in mechanism for handling errors that occur during the execution of the effect, so that it does not crash the entire application. useLayoutEffect does not have this mechanism, and errors that occur during the execution of the effect will crash the entire application.</p>
+<p>In general, it&#x27;s recommended to use useEffect as much as possible, because it is more performant and less prone to errors. useLayoutEffect should only be used when you need to measure or update layout, and you can&#x27;t achieve the same result using useEffect.</p>
+<h3 id="46--explain-the-context-api-and-when-you-would-use-it-what-are-the-use-cases-of-usecontext-hook">46. ❗❗❗ Explain the <code>Context API</code> and when you would use it. What are the use cases of <code>useContext</code> hook?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="47--are-libraries-needed-for-state-management-if-there-are-libraries-for-caching-react-queryswr-and-react-context">47. ❗❗❗ Are libraries needed for <code>state management</code> if there are libraries for caching (<code>React Query/SWR</code>) and <code>React Context</code>?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="48--in-what-cases-do-you-use-usereducer-how-do-you-compare-usestate-and-usereducer">48. ❗❗❗ In what cases do you use <code>useReducer</code>? How do you compare <code>useState</code> and <code>useReducer</code>?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="49--explain-how-you-would-handle-global-state-in-a-react-application">49. ❗❗❗ Explain how you would handle <code>global state</code> in a React application.</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="50--state-manager-redux-zustand">50. ❗❗❗ State manager <code>Redux</code>, <code>Zustand</code></h3>
+<p>Answer
+Placeholder</p>
+<h3 id="51--flux-vs-redux-what-are-the-downsides-of-redux-compared-to-flux">51. ❗❗❗ Flux vs Redux. What are the downsides of Redux compared to Flux?</h3>
+<p>Answer
+<code>Flux</code> is an application design paradigm used as a replacement for the more traditional <code>MVC pattern</code>. It is not a framework or a library but a new kind of architecture that complements React and the concept of Unidirectional Data Flow. Facebook uses this pattern internally when working with React.
+The workflow between dispatcher, stores and views components with distinct inputs and outputs.<br>
+Instead of saying downsides we can say that there are few compromises of using Redux over Flux. Those are as follows:<br>
+<strong>a)</strong> You will need to learn to avoid mutations: Flux is un-opinionated about mutating data, but Redux doesn&#x27;t like mutations and many packages complementary to Redux assume you never mutate the state. You can enforce this with dev-only packages like redux-immutable-state-invariant, Immutable.js, or instructing your team to write non-mutating code.<br>
+<strong>b)</strong> You&#x27;re going to have to carefully pick your packages: While Flux explicitly doesn&#x27;t try to solve problems such as undo/redo, persistence, or forms, Redux has extension points such as middleware and store enhancers, and it has spawned a rich ecosystem.</p>
+<h3 id="52-what-are-the-core-principles-of-redux">52. What are the core principles of Redux?</h3>
+<p>Answer
+Redux is a predictable state container for JavaScript apps based on the Flux design pattern. Redux can be used together with React, or with any other view library. It is tiny (about 2kB) and has no dependencies.
+Redux follows three fundamental principles:<br>
+<strong>a)</strong> Single source of truth: The state of your whole application is stored in an object tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.<br>
+<strong>b)</strong> State is read-only: The only way to change the state is to emit an action, an object describing what happened. This ensures that neither the views nor the network callbacks will ever write directly to the state.<br>
+<strong>c)</strong> Changes are made with pure functions: To specify how the state tree is transformed by actions, you write reducers. Reducers are just pure functions that take the previous state and an action as parameters, and return the next state.</p>
+<h3 id="53-what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops">53. What is the difference between mapStateToProps() and mapDispatchToProps()?</h3>
+<p>Answer
+mapStateToProps() is a utility which helps your component get updated state (which is updated by some other components):</p>
+<pre><code class="language-js">const mapStateToProps = (state) =&gt; {
+  return {
+    todos: getVisibleTodos(state.todos, state.visibilityFilter),
+  };
+};
+</code></pre>
+<p>mapDispatchToProps() is a utility which will help your component to fire an action event (dispatching action which may cause change of application state):</p>
+<pre><code class="language-js">const mapDispatchToProps = (dispatch) =&gt; {
+  return {
+    onTodoClick: (id) =&gt; {
+      dispatch(toggleTodo(id));
+    },
+  };
+};
+</code></pre>
+<p>It is recommended to always use the “object shorthand” form for the mapDispatchToProps.<br>
+Redux wraps it in another function that looks like (…args) =&gt; dispatch(onTodoClick(…args)), and pass that wrapper function as a prop to your component.</p>
+<pre><code class="language-js">const mapDispatchToProps = {
+  onTodoClick,
+};
+</code></pre>
+<h3 id="54-what-are-the-different-ways-to-write-mapdispatchtoprops">54. What are the different ways to write mapDispatchToProps()?</h3>
+<p>Answer
+There are a few ways of binding action creators to dispatch() in mapDispatchToProps().<br>
+Below are the possible options:</p>
+<pre><code class="language-js">const mapDispatchToProps = (dispatch) =&gt; ({
+  action: () =&gt; dispatch(action()),
+});
+const mapDispatchToProps = (dispatch) =&gt; ({
+  action: bindActionCreators(action, dispatch),
+});
+const mapDispatchToProps = { action };
+The third option is just a shorthand for the first one.
+</code></pre>
+<h3 id="55-what-is-an-action-in-redux">55. What is an <code>action</code> in Redux?</h3>
+<p>Answer
+Actions are plain JavaScript objects or payloads of information that send data from your application to your store. They are the only source of information for the store. Actions must have a type property that indicates the type of action being performed.<br>
+For example, let&#x27;s take an action which represents adding a new todo item:</p>
+<pre><code class="language-js">{
+  type: ADD_TODO,
+  text: &#x27;Add todo item&#x27;
+}
+</code></pre>
+<h3 id="56--how-to-reset-state-in-redux">56. ❗❗❗ How to <code>reset state</code> in Redux?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="58-why-are-redux-state-functions-called-reducers">58. Why are Redux state functions called <code>reducers</code>?</h3>
+<p>Answer
+Reducers always return the accumulation of the state (based on all previous and current actions). Therefore, they act as a reducer of state. Each time a Redux reducer is called, the state and action are passed as parameters. This state is then reduced (or accumulated) based on the action, and then the next state is returned. You could reduce a collection of actions and an initial state (of the store) on which to perform these actions to get the resulting final state.</p>
+<h3 id="59-what-are-redux-selectors-and-why-to-use-them">59. What are <code>Redux selectors</code> and Why to use them?</h3>
+<p>Answer
+Selectors are functions that take Redux state as an argument and return some data to pass to the component.<br>
+For example, to get user details from the state:</p>
+<pre><code class="language-js">const getUserData = (state) =&gt; state.user.data;
+</code></pre>
+<p>These selectors have two main benefits,<br>
+<strong>a)</strong> The selector can compute derived data, allowing Redux to store the minimal possible state<br>
+<strong>b)</strong> The selector is not recomputed unless one of its arguments changes</p>
+<h3 id="60--did-you-work-with-memoized-selectors-what-are-they-used-for">60. ❗❗❗ Did you work with <code>memoized selectors</code>? What are they used for?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="61-what-is-reselect-and-how-it-works">61. What is <code>reselect</code> and how it works?</h3>
+<p>Answer
+Let&#x27;s see the main features of <code>Reselect</code> library,<br>
+<strong>a)</strong> Selectors can compute derived data, allowing Redux to store the minimal possible state.<br>
+<strong>b)</strong> Selectors are efficient. A selector is not recomputed unless one of its arguments changes.<br>
+<strong>c)</strong> Selectors are composable. They can be used as input to other selectors.
+Let&#x27;s take calculations and different amounts of a shipment order with the simplified usage of Reselect:</p>
+<pre><code class="language-js">import { createSelector } from &quot;reselect&quot;;
+
+const shopItemsSelector = (state) =&gt; state.shop.items;
+const taxPercentSelector = (state) =&gt; state.shop.taxPercent;
+
+const subtotalSelector = createSelector(shopItemsSelector, (items) =&gt;
+  items.reduce((acc, item) =&gt; acc + item.value, 0)
+);
+
+const taxSelector = createSelector(
+  subtotalSelector,
+  taxPercentSelector,
+  (subtotal, taxPercent) =&gt; subtotal * (taxPercent / 100)
+);
+
+export const totalSelector = createSelector(
+  subtotalSelector,
+  taxSelector,
+  (subtotal, tax) =&gt; ({ total: subtotal + tax })
+);
+
+let exampleState = {
+  shop: {
+    taxPercent: 8,
+    items: [
+      { name: &quot;apple&quot;, value: 1.2 },
+      { name: &quot;orange&quot;, value: 0.95 },
+    ],
+  },
+};
+
+console.log(subtotalSelector(exampleState)); // 2.15
+console.log(taxSelector(exampleState)); // 0.172
+console.log(totalSelector(exampleState)); // { total: 2.322 }
+</code></pre>
+<h3 id="57-what-is-the-difference-between-react-context-and-react-redux">57. What is the difference between <code>React context</code> and <code>React Redux</code>?</h3>
+<p>Answer
+You can use <code>Context</code> in your application directly and is going to be great for passing down data to deeply nested components which what it was designed for.<br>
+Whereas <code>Redux</code> is much more powerful and provides a large number of features that the Context API doesn&#x27;t provide. Also, React Redux uses context internally but it doesn&#x27;t expose this fact in the public API.</p>
+<h3 id="62-how-to-make-ajax-request-in-redux">62. How to make <code>AJAX request</code> in Redux?</h3>
+<p>Answer
+You can use redux-thunk middleware which allows you to define async actions.<br>
+Let&#x27;s take an example of fetching specific account as an AJAX call using fetch API:</p>
+<pre><code class="language-js">export function fetchAccount(id) {
+  return (dispatch) =&gt; {
+    dispatch(setLoadingAccountState()); // Show a loading spinner
+    fetch(`/account/${id}`, (response) =&gt; {
+      dispatch(doneFetchingAccount()); // Hide loading spinner
+      if (response.status === 200) {
+        dispatch(setAccount(response.json)); // Use a normal function to set the received state
+      } else {
+        dispatch(someError);
+      }
+    });
+  };
+}
+
+function setAccount(data) {
+  return { type: &quot;SET_Account&quot;, data: data };
+}
+</code></pre>
+<h3 id="63-what-is-the-proper-way-to-access-redux-store">63. What is the proper way to access <code>Redux store</code>?</h3>
+<p>Answer
+The best way to access your store in a component is to use the connect() function, that creates a new component that wraps around your existing one. This pattern is called Higher-Order Components, and is generally the preferred way of extending a component&#x27;s functionality in React. This allows you to map state and action creators to your component, and have them passed in automatically as your store updates.<br>
+Let&#x27;s take an example of <code>&lt;FilterLink&gt;</code> component using connect:</p>
+<pre><code class="language-js">import { connect } from &quot;react-redux&quot;;
+import { setVisibilityFilter } from &quot;../actions&quot;;
+import Link from &quot;../components/Link&quot;;
+
+const mapStateToProps = (state, ownProps) =&gt; ({
+  active: ownProps.filter === state.visibilityFilter,
+});
+
+const mapDispatchToProps = (dispatch, ownProps) =&gt; ({
+  onClick: () =&gt; dispatch(setVisibilityFilter(ownProps.filter)),
+});
+
+const FilterLink = connect(mapStateToProps, mapDispatchToProps)(Link);
+
+export default FilterLink;
+</code></pre>
+<p>Due to it having quite a few performance optimizations and generally being less likely to cause bugs, the Redux developers almost always recommend using connect() over accessing the store directly (using context API).</p>
+<pre><code class="language-js">function MyComponent {
+  someMethod() {
+    doSomethingWith(this.context.store);
+  }
+}
+</code></pre>
+<h3 id="64-what-is-the-difference-between-component-and-container-in-react-redux">64. What is the difference between <code>component</code> and <code>container</code> in React Redux?</h3>
+<p>Answer
+<code>Component</code> is a class or function component that describes the presentational part of your application.<br>
+<code>Container</code> is an informal term for a component that is connected to a Redux store. Containers subscribe to Redux state updates and dispatch actions, and they usually don&#x27;t render DOM elements; they delegate rendering to presentational child components.</p>
+<h3 id="65--how-do-you-use-immer-library-for-state-updates">65. ❗❗❗ How do you use <code>immer</code> library for state updates?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="66-do-you-use-redux-thunk-or-redux-saga-what-is-redux-thunk-what-is-redux-saga-what-is-the-difference-between-them">66. Do you use <code>redux-thunk</code> or <code>redux-saga</code>? What is redux-thunk? What is redux-saga? What is the difference between them?</h3>
+<p>Answer
+<code>Redux Saga</code> is a library that aims to make side effects (asynchronous things like data fetching and impure things like accessing the browser cache) in React/Redux applications easier and better.<br>
+Saga is like a separate thread in your application, that&#x27;s solely responsible for side effects. redux-saga is a redux middleware, which means this thread can be started, paused and cancelled from the main application with normal Redux actions, it has access to the full Redux application state and it can dispatch Redux actions as well.<br>
+<code>Redux Thunk</code> middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. The inner function receives the store methods dispatch() and getState() as parameters.
+Both <code>Redux Thunk</code> and <code>Redux Saga</code> take care of dealing with side effects. In most of the scenarios, Thunk uses Promises to deal with them, whereas Saga uses Generators. Thunk is simple to use and Promises are familiar to many developers, Sagas/Generators are more powerful but you will need to learn them. But both middleware can coexist, so you can start with Thunks and introduce Sagas when/if you need them.</p>
+<h3 id="67-what-are-the-differences-between-call-and-put-in-redux-saga">67. What are the differences between <code>call</code> and <code>put</code> in <code>redux-saga</code>?</h3>
+<p>Answer
+Both call() and put() are effect creator functions. call() function is used to create effect description, which instructs middleware to call the promise. put() function creates an effect, which instructs middleware to dispatch an action to the store.<br>
+Let&#x27;s take example of how these effects work for fetching particular user data.</p>
+<pre><code class="language-js">function* fetchUserSaga(action) {
+  // `call` function accepts rest arguments, which will be passed to `api.fetchUser` function.
+  // Instructing middleware to call promise, it resolved value will be assigned to `userData` variable
+  const userData = yield call(api.fetchUser, action.userId);
+
+  // Instructing middleware to dispatch corresponding action.
+  yield put({
+    type: &quot;FETCH_USER_SUCCESS&quot;,
+    userData,
+  });
+}
+</code></pre>
+<h3 id="68--how-do-you-optimize-a-react-applications-performance">68. ❗❗❗ How do you optimize a React application’s performance?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="69--explain-how-memoization-works-in-react-react-memo">69. ❗❗❗ Explain how memoization works in React (React memo).</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="70--what-is-react-lazy-function-and-we-need-suspense-component">70. ❗❗❗ What is <code>React lazy</code> function? And we need <code>Suspense</code> component?</h3>
+<p>Answer
+The React.lazy function lets you render a dynamic import as a regular component. It will automatically load the bundle containing the OtherComponent when the component gets rendered. This must return a Promise which resolves to a module with a default export containing a React component.</p>
+<pre><code class="language-js">const OtherComponent = React.lazy(() =&gt; import(&quot;./OtherComponent&quot;));
+
+function MyComponent() {
+  return (
+    &lt;div&gt;
+      &lt;OtherComponent /&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h3 id="71--what-is-code-splitting-and-what-types-of-code-splitting-do-we-have-page-based-component-based-but-be-careful-it-impact-on-seo">71. ❗❗❗ What is <code>Code splitting</code> and what types of code-splitting do we have? (page-based, component-based; but be careful it impact on SEO)</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="72--you-have-a-task-to-render-a-large-list-100k--items-how-would-you-accomplish-this-task">72. ❗❗❗ You have a task to render a large list (100k + items). How would you accomplish this task?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="73--why-we-sometimes-need-a-packages-like-react-virtualized-or-react-window">73. ❗❗❗ Why we sometimes need a packages like react-virtualized or react-window?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="74--why-we-sometimes-need-a-pagination">74. ❗❗❗ Why we sometimes need a pagination?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="75--explain-what-a-single-page-app-is-and-how-to-make-one-seo-friendly">75. ❗❗❗ Explain what a <code>single page app</code> is and how to make one SEO-friendly.</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="76--what-is-server-components">76. ❗❗❗ What is <code>server components</code>?</h3>
+<p>Answer
+React Server Component is a way to write React component that gets rendered in the server-side with the purpose of improving React app performance. These components allow us to load components from the backend.</p>
+<h3 id="77--what-is-optimistic-updates">77. ❗❗❗ What is <code>Optimistic updates</code>?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="78--what-is-key-prop-and-what-is-the-benefit-of-using-it-in-arrays-of-elements-what-is-reconciliation">78. ❗❗❗ What is <code>key</code> prop and what is the benefit of using it in arrays of elements? What is reconciliation?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="79--can-i-use-keys-for-non-list-items">79. ❗❗❗ Can I use <code>keys</code> for non-list items?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="-80-do-we-have-a-component-to-catch-the-errors-in-which-scenarios-errorboundary-do-not-catch-errors-do-we-have-any-other-ways-to-catch-the-errors-windowonerror-serialize-error--json-stable-stringify">❗❗❗ 80. Do we have a component to catch the errors? In which scenarios <code>ErrorBoundary</code> do not catch errors? Do we have any other ways to catch the errors? (window.onerror, serialize error + json-stable-stringify)</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="-81-give-an-example-of-react-pattern-compound-components">❗❗❗ 81. Give an example of React-pattern <code>Compound components</code>.</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="-83-what-patterns-from-react-do-you-know">❗❗❗ 83. What <code>patterns</code> from React do you know?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="-84-how-do-you-maintain-design-and-styling-consistency-across-large-react-codebases-what-approaches-or-tools-do-you-use-to-maintain-ui-unity">❗❗❗ 84. How do you maintain design and styling consistency across large React codebases? What approaches or tools do you use to maintain UI unity?</h3>
+<p>Answer
+Placeholder</p>
+<h3 id="-85-how-do-you-structure-and-organize-the-components-of-large-react-applications-what-approaches-do-you-use-for-logical-separation-of-components-code-reuse-and-maintainability">❗❗❗ 85. How do you structure and organize the components of large React applications? What approaches do you use for logical separation of components, code reuse, and maintainability?</h3>
+<p>Answer
+Placeholder</p>
+<pre><code></code></pre></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/pathliving/front-end-interview-questions/docs/answers/react.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/answers/typescript"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Typecript</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/answers/testing"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Testing</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#1-what-is-jsx">1. What is <code>JSX</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#2-what-is-strict-mode-in-react-what-is-the-benefit-of-strict-mode-why-does-strict-mode-render-twice-in-react">2. What is <code>strict mode</code> in React? What is the benefit of strict mode? Why does strict mode render twice in React?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#3-what-is-the-difference-between-element-and-component">3. What is the difference between <code>Element</code> and <code>Component</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#-4-what-are-controlled-and-uncontrolled-components">❗❗❗ 4. What are <code>controlled</code> and <code>uncontrolled</code> components?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#5-what-are-pure-components">5. What are <code>Pure Components</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#6-what-are-the-problems-of-using-render-props-with-pure-components">6. What are the problems of using <code>render props</code> with pure components?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#7--explain-the-difference-between-functional-and-class-components-what-are-react-hooks-and-how-do-they-differ-from-class-based-components">7. ❗❗❗ Explain the difference between <code>functional</code> and <code>class components</code>. What are React hooks and how do they differ from class-based components?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#8-what-are-stateless-components">8. What are <code>stateless</code> components?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#9-what-are-stateful-components">9. What are <code>stateful</code> components?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#10-what-is-the-difference-between-html-and-react-event-handling-what-are-synthetic-events-in-react">10. What is the difference between HTML and React <code>event handling</code>? What are <code>synthetic events</code> in React?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#11-what-is-virtual-dom-or-vdom">11. What is <code>virtual DOM</code> or <code>vdom</code></a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#12-what-is-the-diffrence-between-virtual-dom-vs-shadow-dom">12. What is the diffrence between <code>Virtual DOM</code> vs <code>Shadow DOM</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#13-what-is-react-fiber">13. What is React Fiber?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#14-what-is-the-difference-between-imperative-and-declarative-in-react">14. What is the difference between <code>Imperative</code> and <code>Declarative</code> in React?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#15-what-is-the-difference-between-createelement-and-cloneelement">15. What is the difference between <code>createElement</code> and <code>cloneElement</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#16-what-is-lifting-state-up-in-react">16. What is <code>Lifting State Up</code> in React?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#17-what-is-the-purpose-of-displayname-class-property">17. What is the purpose of <code>displayName</code> class property?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#19-what-is-children-prop">19. What is <code>children prop</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#21-why-react-uses-classname-over-class-attribute">21. Why React uses <code>className</code> over class attribute?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#22-what-are-fragments">22. What are <code>fragments</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#23-why-we-need-a-react-portals">23. Why we need a <code>React portals</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#24-why-we-need-refs">24. Why we need <code>refs</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#-25-what-the-difference-between-createref-і-useref">❗❗❗ 25. What the difference between <code>createRef</code> і <code>useRef</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#26-what-is-the-difference-between-usestate-and-useref-hook">26. What is the difference between <code>useState</code> and <code>useRef</code> hook?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#27-what-is-the-use-of-react-dom-package">27. What is the use of <code>react-dom</code> package?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#28-what-is-reactdomserver">28. What is <code>ReactDOMServer</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#29-what-is-the-difference-between-react-and-reactdom">29. What is the difference between <code>React</code> and <code>ReactDOM</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#30-why-reactdom-is-separated-from-react">30. Why <code>ReactDOM</code> is separated from <code>React</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#18-what-are-higher-order-components">18. What are <code>Higher-Order components</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#31-do-hooks-replace-render-props-and-higher-order-components">31. Do <code>hooks</code> replace render props and <code>higher-order components</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#33-how-jsx-prevents-injection-attacks">33. How JSX prevents <code>Injection Attacks</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#34-why-should-component-names-start-with-capital-letter">34. Why should component names start with capital letter?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#35-what-is-concurrent-rendering">35. What is <code>Concurrent Rendering</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#36-what-is-the-difference-between-async-mode-and-concurrent-mode">36. What is the difference between <code>async mode</code> and <code>concurrent mode</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#37-how-does-react-batch-multiple-state-updates">37. How does React batch multiple state updates?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#38-is-it-possible-to-prevent-automatic-batching">38. Is it possible to prevent automatic batching?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#39-what-is-react-hydration">39. What is React hydration?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#40-the-rule-of-hooks-what-conditions-must-a-function-meet-to-be-a-hook">40. The <code>rule of hooks</code>? What conditions must a function meet to be a hook?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#41-the-rules-of-react">41. The <code>rules of React</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#41--explain-what-is-happening-in-this-code-and-in-what-scenarios-it-might-be-useful">41. ❗❗❗ Explain what is happening in this code and in what scenarios it might be useful:</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#43--what-is-cleanup-function-in-react-hooks">43. ❗❗❗ What is <code>cleanup function</code> in React hooks?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#44--what-hooks-do-you-know-usestate-useeffect-usecallback-usememo-usecontext-uselayouteffect-usereducer-useref-usedebugvalue-usedeferredvalue-useid-useimperativehandle-useinsertioneffect-usesyncexternalstore-usetransition-useoptimistic-useactionstate-useformstatus">44. ❗❗❗ What hooks do you know? (<code>useState, useEffect, useCallback, useMemo, useContext, useLayoutEffect, useReducer, useRef, useDebugValue, useDeferredValue, useId, useImperativeHandle, useInsertionEffect, useSyncExternalStore, useTransition, useOptimistic, useActionState, useFormStatus</code>)</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#42--how-does-the-usedeferredvalue-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useDeferredValue</code> hook work? Provide an example.</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#42--how-does-the-usetransition-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useTransition</code> hook work? Provide an example.</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#42--how-does-the-usedebugvalue-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useDebugValue</code> hook work? Provide an example.</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#42--how-does-the-useimperativehandle-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useImperativeHandle</code> hook work? Provide an example.</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#42--how-does-the-useinsertioneffect-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useInsertionEffect</code> hook work? Provide an example.</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#42--how-does-the-usesyncexternalstore-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useSyncExternalStore</code> hook work? Provide an example.</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#42--how-does-the-useoptimistic-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useOptimistic</code> hook work? Provide an example.</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#42--how-does-the-useactionstate-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useActionState</code> hook work? Provide an example.</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#42--how-does-the-useformstatus-hook-work-provide-an-example">42. ❗❗❗ How does the <code>useFormStatus</code> hook work? Provide an example.</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#45-what-is-the-difference-between-uselayouteffect-and-useeffect-in-which-cases-do-you-use-which">45. What is the difference between <code>useLayoutEffect</code> and <code>useEffect</code>, in which cases do you use which?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#46--explain-the-context-api-and-when-you-would-use-it-what-are-the-use-cases-of-usecontext-hook">46. ❗❗❗ Explain the <code>Context API</code> and when you would use it. What are the use cases of <code>useContext</code> hook?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#47--are-libraries-needed-for-state-management-if-there-are-libraries-for-caching-react-queryswr-and-react-context">47. ❗❗❗ Are libraries needed for <code>state management</code> if there are libraries for caching (<code>React Query/SWR</code>) and <code>React Context</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#48--in-what-cases-do-you-use-usereducer-how-do-you-compare-usestate-and-usereducer">48. ❗❗❗ In what cases do you use <code>useReducer</code>? How do you compare <code>useState</code> and <code>useReducer</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#49--explain-how-you-would-handle-global-state-in-a-react-application">49. ❗❗❗ Explain how you would handle <code>global state</code> in a React application.</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#50--state-manager-redux-zustand">50. ❗❗❗ State manager <code>Redux</code>, <code>Zustand</code></a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#51--flux-vs-redux-what-are-the-downsides-of-redux-compared-to-flux">51. ❗❗❗ Flux vs Redux. What are the downsides of Redux compared to Flux?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#52-what-are-the-core-principles-of-redux">52. What are the core principles of Redux?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#53-what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops">53. What is the difference between mapStateToProps() and mapDispatchToProps()?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#54-what-are-the-different-ways-to-write-mapdispatchtoprops">54. What are the different ways to write mapDispatchToProps()?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#55-what-is-an-action-in-redux">55. What is an <code>action</code> in Redux?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#56--how-to-reset-state-in-redux">56. ❗❗❗ How to <code>reset state</code> in Redux?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#58-why-are-redux-state-functions-called-reducers">58. Why are Redux state functions called <code>reducers</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#59-what-are-redux-selectors-and-why-to-use-them">59. What are <code>Redux selectors</code> and Why to use them?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#60--did-you-work-with-memoized-selectors-what-are-they-used-for">60. ❗❗❗ Did you work with <code>memoized selectors</code>? What are they used for?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#61-what-is-reselect-and-how-it-works">61. What is <code>reselect</code> and how it works?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#57-what-is-the-difference-between-react-context-and-react-redux">57. What is the difference between <code>React context</code> and <code>React Redux</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#62-how-to-make-ajax-request-in-redux">62. How to make <code>AJAX request</code> in Redux?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#63-what-is-the-proper-way-to-access-redux-store">63. What is the proper way to access <code>Redux store</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#64-what-is-the-difference-between-component-and-container-in-react-redux">64. What is the difference between <code>component</code> and <code>container</code> in React Redux?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#65--how-do-you-use-immer-library-for-state-updates">65. ❗❗❗ How do you use <code>immer</code> library for state updates?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#66-do-you-use-redux-thunk-or-redux-saga-what-is-redux-thunk-what-is-redux-saga-what-is-the-difference-between-them">66. Do you use <code>redux-thunk</code> or <code>redux-saga</code>? What is redux-thunk? What is redux-saga? What is the difference between them?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#67-what-are-the-differences-between-call-and-put-in-redux-saga">67. What are the differences between <code>call</code> and <code>put</code> in <code>redux-saga</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#68--how-do-you-optimize-a-react-applications-performance">68. ❗❗❗ How do you optimize a React application’s performance?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#69--explain-how-memoization-works-in-react-react-memo">69. ❗❗❗ Explain how memoization works in React (React memo).</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#70--what-is-react-lazy-function-and-we-need-suspense-component">70. ❗❗❗ What is <code>React lazy</code> function? And we need <code>Suspense</code> component?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#71--what-is-code-splitting-and-what-types-of-code-splitting-do-we-have-page-based-component-based-but-be-careful-it-impact-on-seo">71. ❗❗❗ What is <code>Code splitting</code> and what types of code-splitting do we have? (page-based, component-based; but be careful it impact on SEO)</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#72--you-have-a-task-to-render-a-large-list-100k--items-how-would-you-accomplish-this-task">72. ❗❗❗ You have a task to render a large list (100k + items). How would you accomplish this task?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#73--why-we-sometimes-need-a-packages-like-react-virtualized-or-react-window">73. ❗❗❗ Why we sometimes need a packages like react-virtualized or react-window?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#74--why-we-sometimes-need-a-pagination">74. ❗❗❗ Why we sometimes need a pagination?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#75--explain-what-a-single-page-app-is-and-how-to-make-one-seo-friendly">75. ❗❗❗ Explain what a <code>single page app</code> is and how to make one SEO-friendly.</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#76--what-is-server-components">76. ❗❗❗ What is <code>server components</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#77--what-is-optimistic-updates">77. ❗❗❗ What is <code>Optimistic updates</code>?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#78--what-is-key-prop-and-what-is-the-benefit-of-using-it-in-arrays-of-elements-what-is-reconciliation">78. ❗❗❗ What is <code>key</code> prop and what is the benefit of using it in arrays of elements? What is reconciliation?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#79--can-i-use-keys-for-non-list-items">79. ❗❗❗ Can I use <code>keys</code> for non-list items?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#-80-do-we-have-a-component-to-catch-the-errors-in-which-scenarios-errorboundary-do-not-catch-errors-do-we-have-any-other-ways-to-catch-the-errors-windowonerror-serialize-error--json-stable-stringify">❗❗❗ 80. Do we have a component to catch the errors? In which scenarios <code>ErrorBoundary</code> do not catch errors? Do we have any other ways to catch the errors? (window.onerror, serialize error + json-stable-stringify)</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#-81-give-an-example-of-react-pattern-compound-components">❗❗❗ 81. Give an example of React-pattern <code>Compound components</code>.</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#-83-what-patterns-from-react-do-you-know">❗❗❗ 83. What <code>patterns</code> from React do you know?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#-84-how-do-you-maintain-design-and-styling-consistency-across-large-react-codebases-what-approaches-or-tools-do-you-use-to-maintain-ui-unity">❗❗❗ 84. How do you maintain design and styling consistency across large React codebases? What approaches or tools do you use to maintain UI unity?</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/answers/react#-85-how-do-you-structure-and-organize-the-components-of-large-react-applications-what-approaches-do-you-use-for-logical-separation-of-components-code-reuse-and-maintainability">❗❗❗ 85. How do you structure and organize the components of large React applications? What approaches do you use for logical separation of components, code reuse, and maintainability?</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/questions/html">Questions</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/questions/html">Answers</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/pathliving/front-end-interview-questions" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Front-end interview questions, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

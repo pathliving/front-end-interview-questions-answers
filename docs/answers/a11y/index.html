@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-answers/a11y" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.4.0">
+<title data-rh="true">A11Y (questions prepared) | Front-end interview questions</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/docs/answers/a11y"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="A11Y (questions prepared) | Front-end interview questions"><meta data-rh="true" name="description" content="1. How would you define inclusive and/or universal design?"><meta data-rh="true" property="og:description" content="1. How would you define inclusive and/or universal design?"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/docs/answers/a11y"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/answers/a11y" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/answers/a11y" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.70ff24a8.css">
+<script src="/assets/js/runtime~main.cf51990d.js" defer="defer"></script>
+<script src="/assets/js/main.3abde22a.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="Front-end Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="Front-end Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Front-end</b></a><a class="navbar__item navbar__link" href="/docs/questions/html">Questions</a><a class="navbar__item navbar__link" href="/docs/answers/html">Answers</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/pathliving/front-end-interview-questions" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro">Intro</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/resources">Resources</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/todo">TODO</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/questions/html">Questions</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/html">HTML</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/css">CSS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/javascript">Javascript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/typescript">Typecript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/react">React</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/testing">Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/fundamentals">Fundamentals</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/a11y">A11Y</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/answers/html">Answers</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/html">HTML</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/css">CSS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/javascript">Javascript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/typescript">Typecript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/react">React</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/testing">Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/fundamentals">Fundamentals</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/answers/a11y">A11Y</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Answers</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">A11Y</span><meta itemprop="position" content="2"></li></ul></nav><div class="theme-doc-markdown markdown"><h1 id="a11y-questions-prepared">A11Y (questions prepared)</h1>
+<ol>
+<li>How would you define inclusive and/or universal design?</li>
+</ol>
+<p>Inclusive design aims to create products that are accessible and usable by as many people as possible, regardless of their abilities or disabilities. Universal design extends this concept to create environments and products that are inherently accessible to everyone, without the need for adaptation or specialized design.</p>
+<ol start="2">
+<li>Name some ways responsive/mobile-first design can affect accessibility.</li>
+</ol>
+<p>Responsive design ensures that content is accessible and usable on different screen sizes and devices. It can improve readability with flexible text sizes, ensure touch targets are large enough for users with motor impairments, and maintain logical reading order and navigation.</p>
+<ol start="3">
+<li>What are some user experience (UX) concerns to be aware of when using iconography in user interfaces (UI)?</li>
+</ol>
+<p>Icons should be clear and universally understood. They should include text labels for accessibility. Overreliance on icons without text can confuse users, especially those with cognitive disabilities or those unfamiliar with the iconography.</p>
+<ol start="4">
+<li>What assistive technologies (ATs) are you familiar with (desktop and/or mobile)?</li>
+</ol>
+<p>Common ATs include screen readers (e.g., JAWS, NVDA, VoiceOver), screen magnifiers, speech recognition software, alternative input devices (e.g., switch devices), and mobile accessibility features (e.g., TalkBack).</p>
+<ol start="5">
+<li>What do you feel is your skill level with these AT(s)?</li>
+</ol>
+<p>Proficient: Familiar with basic operation, testing, and debugging accessibility issues using screen readers like NVDA and VoiceOver. Comfortable testing with browser-based tools like Axe and Lighthouse.</p>
+<ol start="6">
+<li>What are skip links? What benefit(s) do they provide? What are some of their limitations?</li>
+</ol>
+<p>Skip links are internal links that allow users to bypass repetitive content and navigate directly to the main content of the page. They are beneficial for keyboard and screen reader users. Limitations include being hidden visually until focused and requiring proper implementation to be effective.</p>
+<ol start="7">
+<li>Describe instances where one might use a link or button.</li>
+</ol>
+<p>Use links for navigation to different pages or sections within a page. Use buttons for actions like submitting a form, opening a modal, or triggering an event without navigation.</p>
+<ol start="8">
+<li>What are some of the tools available to test the accessibility of a website or web application?</li>
+</ol>
+<p>Tools include Axe, Lighthouse, WAVE, NVDA, JAWS, VoiceOver, Chrome Accessibility Developer Tools, and screen reader simulators.</p>
+<ol start="9">
+<li>What is WCAG?</li>
+</ol>
+<p>The Web Content Accessibility Guidelines (WCAG) are a set of guidelines developed by the W3C to make web content more accessible to people with disabilities. They cover a wide range of recommendations for making web content accessible.</p>
+<ol start="10">
+<li>What are the differences between A, AA, and AAA compliance?</li>
+</ol>
+<p>A: Basic web accessibility; essential accessibility features.
+AA: Deals with the biggest and most common barriers for disabled users; generally considered the standard for compliance.
+AAA: The highest and most complex level of web accessibility; not all content can conform to AAA.</p>
+<ol start="11">
+<li>How can carousels be problematic for users with disabilities?</li>
+</ol>
+<p>Carousels can cause issues for screen reader users, users with motor impairments, and users with cognitive disabilities due to auto-advancing slides, inconsistent focus, and non-intuitive navigation.</p>
+<ol start="12">
+<li>How would you convince your Manager to allocate funds for an accessibility audit?</li>
+</ol>
+<p>Emphasize the legal implications of non-compliance (e.g., ADA lawsuits), the potential market reach of accessible sites, and the ethical responsibility of inclusivity. Highlight that accessibility improvements can benefit all users, leading to better overall UX and customer satisfaction.</p>
+<ol start="13">
+<li>Describe a situation where a coworker may have been resistant to accessibility or inclusive design best practices.</li>
+</ol>
+<p>A common scenario is a coworker believing that accessibility is too time-consuming or costly. In such cases, I would demonstrate quick wins and easy fixes, present case studies showing the positive impact on business and users, and advocate for building accessibility into the workflow to save time in the long run.</p>
+<ol start="14">
+<li>If a client/stakeholder doesn’t want to pay for accessibility what would you do?</li>
+</ol>
+<p>I would educate them on the legal risks, potential market reach, and the ethical importance of accessibility. Present examples of successful businesses that have benefited from accessible designs and offer phased approaches to spread out costs.</p>
+<ol start="15">
+<li>What methods can you use to find an element’s accessible name?</li>
+</ol>
+<p>Use browser developer tools to inspect the element’s ARIA attributes, associated labels, or text content. Tools like Axe and Lighthouse can also help identify accessible names.</p>
+<ol start="16">
+<li>What is the accessibility tree?</li>
+</ol>
+<p>The accessibility tree is a structure built by the browser that represents the accessibility information of the DOM. It is used by assistive technologies to interpret and interact with the web content.</p>
+<ol start="17">
+<li>Why is it important to allow the viewport to be resized, and/or zoomed?</li>
+</ol>
+<p>Allowing viewport resizing and zooming ensures that users with low vision can adjust the text size and layout to suit their needs, improving readability and overall accessibility.</p>
+<ol start="18">
+<li>What kind of elements can title attributes be used on? What sort of information is appropriate for use with the title attribute?</li>
+</ol>
+<p>Title attributes can be used on most HTML elements. They provide supplementary information that appears as a tooltip on hover. However, they should not be relied upon for essential information, as they are not always accessible to screen readers.</p>
+<ol start="19">
+<li>Provide an example of when you might need to add a description to an element.</li>
+</ol>
+<p>Adding a description to a form input that requires specific instructions, such as a date input field with a required format, can help users understand how to complete the form correctly.</p>
+<ol start="20">
+<li>What is a focus trap, or focus trapping? Describe an instance of when you’d need focus trapping.</li>
+</ol>
+<p>Focus trapping ensures that keyboard focus stays within a modal or dropdown until the user closes it. This is essential for dialogs and popups to prevent users from accidentally navigating outside the element and losing context.</p>
+<ol start="21">
+<li>Describe a situation where the tabindex attribute would be useful. Provide an example of when using the tabindex attribute can cause problems.</li>
+</ol>
+<p>tabindex is useful for creating a custom tab order or making non-interactive elements focusable. Problems arise when overused or used incorrectly, leading to a confusing or illogical focus order.</p>
+<ol start="22">
+<li>What are landmark regions and how can they be useful?</li>
+</ol>
+<p>Landmark regions (e.g., <code>&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt;</code>) help screen reader users navigate the page structure quickly and easily by providing semantic regions.</p>
+<ol start="23">
+<li>In what situations might you use a toggle button, vs a switch control, vs a checkbox?</li>
+</ol>
+<p>Use toggle buttons for binary states in a user interface (e.g., play/pause). Use switches for on/off states (e.g., turning settings on or off). Use checkboxes for selecting multiple options from a list.</p>
+<ol start="24">
+<li>Describe methods to hide content and why you might do so: From all users. From only screen reader users. From sighted users, but not screen reader users.</li>
+</ol>
+<p>To hide from all users: display: none or visibility: hidden.
+To hide from screen readers: aria-hidden=&quot;true&quot;.
+To hide from sighted users but not screen readers: position: absolute; left: -9999px; or clip-path: inset(50%).</p>
+<ol start="25">
+<li>Provide examples of common incorrect usage of ARIA attributes. Aside from screen readers, what other assistive technologies can be affected by use of ARIA? How?</li>
+</ol>
+<p>Incorrect usage: Using aria-hidden=&quot;true&quot; on focusable elements, or misusing roles that don’t match the element’s purpose. ARIA attributes can affect other ATs like braille displays and voice recognition software by providing misleading information.</p>
+<ol start="26">
+<li>What is the difference between the following attributes: hidden, aria-hidden=&quot;true&quot; and role=&quot;presentation&quot; or role=&quot;none&quot;?</li>
+</ol>
+<p>hidden: Completely hides content from all users.
+aria-hidden=&quot;true&quot;: Hides content from screen readers but not visually.
+role=&quot;presentation&quot; or role=&quot;none&quot;: Removes semantic meaning from an element, making it ignored by screen readers but still visible.</p>
+<ol start="27">
+<li>Describe instances where you might need to use aria-live.</li>
+</ol>
+<p>Use aria-live for dynamic content updates, such as live news feeds, chat messages, or notifications, to inform screen reader users about changes.</p>
+<ol start="28">
+<li>What values (such as assertive or polite) might you give the attribute in different situations?</li>
+</ol>
+<p>aria-live=&quot;polite&quot;: For non-critical updates (e.g., new messages in a chat).
+aria-live=&quot;assertive&quot;: For urgent updates that require immediate attention (e.g., error messages).</p>
+<ol start="29">
+<li>How would you mark-up an icon font or SVG that was for decorative purposes?</li>
+</ol>
+<p>Use aria-hidden=&quot;true&quot; to ensure screen readers ignore it. If using <code>&lt;svg&gt;</code>, add role=&quot;img&quot; and an empty title or desc element for extra clarity.</p>
+<ol start="30">
+<li>Is CSS pseudo content understood by screen readers?</li>
+</ol>
+<p>Generally, no. Screen readers do not interpret content added via CSS pseudo-elements (::before and ::after), so it should not be used for important information.</p>
+<ol start="31">
+<li>What is the purpose of the alt attribute for images? Can you describe the effect of an empty alt, and/or the lack of the attribute, on an image?</li>
+</ol>
+<p>The alt attribute provides alternative text for images, which is read by screen readers. An empty alt (alt=&quot;&quot;) indicates the image is decorative, and screen readers will ignore it. Missing alt can cause screen readers to read the image&#x27;s file name or other irrelevant information.</p>
+<ol start="32">
+<li>In what instances might an empty alt or no alt be appropriate?</li>
+</ol>
+<p>Use an empty alt for purely decorative images. Avoid omitting alt entirely, as it leads to poor accessibility practices.</p>
+<ol start="33">
+<li>How might alternative text for an image vary, depending on the context the image is used in?</li>
+</ol>
+<p>Alternative text should describe the image’s function and context. For instance, an image of a graph might have alternative text like &quot;Sales data from 2020 to 2023&quot; when used in a report, but &quot;Company performance&quot; when used on a homepage.</p>
+<ol start="34">
+<li>Since svgs don’t accept the alt attribute, how can one provide alternative text for these graphics?</li>
+</ol>
+<p>Use the <code>&lt;title&gt;</code> and <code>&lt;desc&gt;</code> elements within the SVG, and reference them with aria-labelledby.</p>
+<ol start="35">
+<li>Do you need to supply an image an alt attribute if used within a figure with a figcaption?</li>
+</ol>
+<p>Yes, the alt attribute should still be used to provide a brief description, with the figcaption offering additional context.</p>
+<ol start="36">
+<li>Describe the steps you take in reviewing or auditing a website or application for accessibility?</li>
+</ol>
+<p>Steps include running automated tools (e.g., Axe), manual keyboard navigation testing, checking color contrast, using screen readers for functional testing, and validating HTML for proper use of ARIA and semantic elements.</p>
+<ol start="37">
+<li>Describe an instance where an automated test would not flag a blatant accessibility error?</li>
+</ol>
+<p>Automated tests might miss issues like poor descriptive text for links or buttons, or contextual problems where a visually hidden element lacks necessary ARIA attributes for proper screen reader interaction.</p>
+<ol start="38">
+<li>When should you use or recommend ARIA roles or attributes to solve an accessibility issue?</li>
+</ol>
+<p>Use ARIA roles and attributes when native HTML elements and attributes do not provide the necessary semantic information or interactivity required for accessibility.</p>
+<ol start="39">
+<li>Describe your process for figuring out if an accessibility bug is due to a developer, browser, or assistive technology error?</li>
+</ol>
+<p>Isolate the issue by testing across different browsers, devices, and assistive technologies. Check the HTML and ARIA implementation for correctness. Refer to documentation and community forums for known issues with specific tools.</p>
+<ol start="40">
+<li>What is the difference between legend, caption, and label elements? What are their similarities?</li>
+</ol>
+<p><code>&lt;legend&gt;</code>: Describes the content of a <code>&lt;fieldset&gt;</code>.
+<code>&lt;caption&gt;</code>: Provides a title or description for a <code>&lt;table&gt;</code>.
+<code>&lt;label&gt;</code>: Associates a text description with a form control.
+Similarities: All provide context and improve accessibility by making it clear what certain content or controls refer to.</p>
+<ol start="41">
+<li>Describe the purpose of heading and header elements, and how they are useful in websites and applications.</li>
+</ol>
+<p>Headings (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>) structure content hierarchically, aiding navigation for screen reader users. <code>&lt;header&gt;</code> is a semantic element indicating introductory content or navigational aids. Both improve the semantic structure and accessibility of a webpage.</p>
+<ol start="42">
+<li>Describe how you’d handle managing keyboard focus within a single page web app (SPA) when changing routes.</li>
+</ol>
+<p>Ensure focus moves to a relevant heading or the main content area when the route changes. Use ARIA live regions or focus management techniques to inform users of the change.</p>
+<ol start="43">
+<li>Name an ARIA attribute that requires either a child/parent relationship or a pairing role.</li>
+</ol>
+<p>aria-labelledby requires a pairing with the ID of the element it references. aria-controls requires a relationship with the controlled element.</p>
+<ol start="44">
+<li>What is your understanding of “accessible name computation” and how it affects modifying the way screen readers announce certain content?</li>
+</ol>
+<p>Accessible name computation involves determining the name of an element using its associated label, ARIA attributes, and content. Proper computation ensures that screen readers provide meaningful information to users.</p>
+<ol start="45">
+<li>What are some issues with modifying normal scrolling behavior? For example: infinite scrolling or scrolljacking.</li>
+</ol>
+<p>Modifying scrolling can confuse users, make navigation difficult, and disrupt screen reader users. Infinite scrolling can trap keyboard and screen reader users, while scrolljacking can disorient users and reduce control.</p>
+<ol start="46">
+<li>Some ARIA widgets are presently best supported on devices with physical keyboard, rather than mobile/touch interfaces. Are you aware of any widgets that would be described this way, and why?</li>
+</ol>
+<p>ARIA widgets like tree views or complex grid structures are often better supported on keyboards due to the reliance on keyboard events for navigation and interaction. Touch interfaces may not provide the same level of interaction fidelity or event handling capabilities.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/pathliving/front-end-interview-questions/docs/answers/a11y.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/answers/fundamentals"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Fundamentals</div></a></nav></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/questions/html">Questions</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/questions/html">Answers</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/pathliving/front-end-interview-questions" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Front-end interview questions, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

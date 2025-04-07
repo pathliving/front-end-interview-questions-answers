@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-answers/typescript" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.4.0">
+<title data-rh="true">Typescript (questions prepared) | Front-end interview questions</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/docs/answers/typescript"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Typescript (questions prepared) | Front-end interview questions"><meta data-rh="true" name="description" content="1. The primitives (string, number, and boolean)"><meta data-rh="true" property="og:description" content="1. The primitives (string, number, and boolean)"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/docs/answers/typescript"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/answers/typescript" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/answers/typescript" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.70ff24a8.css">
+<script src="/assets/js/runtime~main.cf51990d.js" defer="defer"></script>
+<script src="/assets/js/main.3abde22a.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="Front-end Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="Front-end Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Front-end</b></a><a class="navbar__item navbar__link" href="/docs/questions/html">Questions</a><a class="navbar__item navbar__link" href="/docs/answers/html">Answers</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/pathliving/front-end-interview-questions" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro">Intro</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/resources">Resources</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/todo">TODO</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/questions/html">Questions</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/html">HTML</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/css">CSS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/javascript">Javascript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/typescript">Typecript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/react">React</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/testing">Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/fundamentals">Fundamentals</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/a11y">A11Y</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/answers/html">Answers</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/html">HTML</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/css">CSS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/javascript">Javascript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/answers/typescript">Typecript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/react">React</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/testing">Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/fundamentals">Fundamentals</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/a11y">A11Y</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Answers</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Typecript</span><meta itemprop="position" content="2"></li></ul></nav><div class="theme-doc-markdown markdown"><h1 id="typescript-questions-prepared">Typescript (questions prepared)</h1>
+<ol>
+<li>The primitives (string, number, and boolean)</li>
+</ol>
+<p>Primitives in TypeScript are the most basic types:
+string: Represents textual data. Example: let name: string = &quot;Alice&quot;;
+number: Represents numeric values. Example: let age: number = 30;
+boolean: Represents true/false values. Example: let isActive: boolean = true;
+Reference</p>
+<ol start="2">
+<li>Less Common Primitives (bigint, symbol)</li>
+</ol>
+<p>bigint: Represents arbitrarily large integers. Example: let bigNum: bigint = 12345678901234567890n;
+symbol: Represents unique and immutable identifiers. Example: let sym: symbol = Symbol(&quot;unique&quot;);
+Reference
+Reference</p>
+<ol start="3">
+<li>Arrays</li>
+</ol>
+<p>Arrays are used to store multiple values of the same type. Example: <code>let list: number[] = [1, 2, 3];</code>
+Generic array type: <code>let list: Array&lt;number&gt; = [1, 2, 3];</code>
+Reference</p>
+<ol start="4">
+<li>Any</li>
+</ol>
+<p>any type allows for values to bypass type-checking. Example: let anything: any = &quot;hello&quot;;
+Useful for gradual typing or when working with dynamic content.
+Reference</p>
+<ol start="5">
+<li>Type Annotations on Variables</li>
+</ol>
+<p>Type annotations explicitly specify the type of a variable. Example: let myName: string = &quot;Alice&quot;;
+Helps with type checking and readability.
+Reference</p>
+<ol start="6">
+<li>Functions</li>
+</ol>
+<p>Functions can have type annotations for parameters and return values. Example:
+typescript
+Copy code</p>
+<pre><code class="language-ts">function greet(name: string): string {
+  return `Hello, ${name}`;
+}
+</code></pre>
+<p>Reference</p>
+<ol start="7">
+<li>Object types (optional properties, readonly properties, index signatures)</li>
+</ol>
+<p>Optional properties: <code>interface User { name: string; age?: number; }</code>
+Readonly properties: <code>interface User { readonly id: number; name: string; }</code>
+Index signatures: <code>interface StringArray { [index: number]: string; }</code>
+Reference
+Reference
+Reference</p>
+<ol start="8">
+<li>Mapped types (build on the index signatures syntax)</li>
+</ol>
+<p>Mapped types transform properties in a type. Example:
+typescript
+Copy code</p>
+<pre><code class="language-ts">type Readonly&lt;T&gt; = {
+  readonly [P in keyof T]: T[P];
+};
+</code></pre>
+<p>Reference</p>
+<ol start="9">
+<li>Tuple types</li>
+</ol>
+<p>Tuples represent an array with fixed types and length. Example: <code>let person: [string, number] = [&quot;Alice&quot;, 30];</code>
+Reference</p>
+<ol start="10">
+<li>Union types</li>
+</ol>
+<p>Union types allow a variable to be one of several types. Example: <code>let id: number | string;</code>
+Reference</p>
+<ol start="11">
+<li>Template Literal types</li>
+</ol>
+<p>Template literal types allow concatenation of string literals at the type level. Example:
+typescript
+Copy code</p>
+<pre><code class="language-ts">type Greeting = `Hello, ${string}`;
+</code></pre>
+<p>Reference</p>
+<ol start="12">
+<li>Type Aliases</li>
+</ol>
+<p>Type aliases create a new name for a type. Example: <code>type ID = number | string;</code>
+Reference</p>
+<ol start="13">
+<li>Interfaces</li>
+</ol>
+<p>Interfaces define the shape of an object. Example:
+typescript
+Copy code</p>
+<pre><code class="language-ts">interface User {
+  name: string;
+  age: number;
+}
+</code></pre>
+<p>Reference</p>
+<ol start="14">
+<li>Differences Between Type Aliases and Interfaces** (intersection vs extending**, can’t adding* vs adding new fields to an existing entity**)**</li>
+</ol>
+<p>Type Aliases: Can represent primitives, unions, tuples, etc. Cannot be extended after creation.
+Interfaces: Can be extended using extends and allow for declaration merging.
+Example of intersection: <code>type A = { x: number } &amp; { y: number };</code>
+Example of extending: <code>interface B extends A { z: number; }</code>
+Reference</p>
+<ol start="15">
+<li>Type Assertions (as)</li>
+</ol>
+<p>Type assertions tell the compiler to treat a value as a specific type. Example: <code>let someValue: any = &quot;hello&quot;; let strLength: number = (someValue as string).length;</code>
+Reference</p>
+<ol start="16">
+<li>Null and undefined (Non-null Assertion Operator (Postfix !))</li>
+</ol>
+<p>Non-null assertion operator (!) tells the compiler a value is not null or undefined. Example: <code>let name: string | null; name!;</code>
+Reference</p>
+<ol start="17">
+<li>Enums</li>
+</ol>
+<p>Enums define a set of named constants. Example:
+typescript
+Copy code</p>
+<pre><code class="language-ts">enum Color {
+  Red,
+  Green,
+  Blue,
+}
+</code></pre>
+<p>Reference</p>
+<ol start="18">
+<li>typeof type guards (truthiness narrowing)</li>
+</ol>
+<p>typeof checks the type of a variable at runtime. Example:
+typescript
+Copy code</p>
+<pre><code class="language-ts">function isNumber(x: any): x is number {
+  return typeof x === &quot;number&quot;;
+}
+</code></pre>
+<p>Reference</p>
+<ol start="19">
+<li>Equality narrowing <code>(===, !==, ==, and !=)</code></li>
+</ol>
+<p>Equality narrowing uses comparison operators to narrow types. Example:
+typescript
+Copy code</p>
+<pre><code class="language-ts">function example(x: string | number) {
+  if (x === &quot;string&quot;) {
+    // x is string
+  } else {
+    // x is number
+  }
+}
+</code></pre>
+<p>Reference</p>
+<ol start="20">
+<li>The in operator narrowing</li>
+</ol>
+<p>in operator checks if a property exists in an object. Example:
+typescript
+Copy code</p>
+<pre><code class="language-ts">function isSquare(shape: any): shape is Square {
+  return &quot;size&quot; in shape;
+}
+</code></pre>
+<p>Reference</p>
+<ol start="21">
+<li>instanceof narrowing</li>
+</ol>
+<p>instanceof checks if an object is an instance of a class. Example:
+typescript
+Copy code</p>
+<pre><code class="language-ts">function logValue(x: Date | string) {
+  if (x instanceof Date) {
+    console.log(x.toUTCString());
+  } else {
+    console.log(x.toUpperCase());
+  }
+}
+</code></pre>
+<p>Reference</p>
+<ol start="22">
+<li>Assignments</li>
+</ol>
+<p>TypeScript infers types based on assignments. Example:
+typescript
+Copy code</p>
+<pre><code class="language-ts">let x = &quot;hello&quot;; // x is inferred as string
+</code></pre>
+<p>Reference</p>
+<ol start="23">
+<li>type predicates (isFish)</li>
+</ol>
+<p>Type predicates are custom type guards. Example:
+typescript
+Copy code</p>
+<pre><code class="language-ts">function isFish(pet: Fish | Bird): pet is Fish {
+  return (pet as Fish).swim !== undefined;
+}
+</code></pre>
+<p>Reference</p>
+<ol start="24">
+<li>Discriminated unions</li>
+</ol>
+<p>Discriminated unions use a common property to differentiate between types. Example:
+typescript
+Copy code</p>
+<pre><code class="language-ts">interface Square {
+  kind: &quot;square&quot;;
+  size: number;
+}
+interface Circle {
+  kind: &quot;circle&quot;;
+  radius: number;
+}
+type Shape = Square | Circle;
+</code></pre>
+<p>Reference</p>
+<hr>
+<ol start="25">
+<li>
+<p>never type
+The never type represents values that never occur. It is used to indicate that a function never returns (e.g., it throws an exception or terminates the program) or for variables that are impossible to have a value.</p>
+</li>
+<li>
+<p>Call Signatures
+Call signatures define the type of a function by specifying the types of its parameters and its return type. In TypeScript, you can define a call signature within an interface or type alias.</p>
+</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type Add = (a: number, b: number) =&gt; number;
+</code></pre>
+<ol start="27">
+<li>Generic Functions (Inference, Constraints)
+Generic functions allow you to create functions that can work with any type, providing type inference and constraints for more flexibility.</li>
+</ol>
+<p>Inference:
+TypeScript infers the type based on the function&#x27;s usage.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">function identity&lt;T&gt;(arg: T): T {
+  return arg;
+}
+let output = identity(&quot;myString&quot;); // TypeScript infers the type as string
+</code></pre>
+<p>Constraints:
+You can constrain a generic type to ensure it meets certain criteria.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">function loggingIdentity&lt;T extends { length: number }&gt;(arg: T): T {
+  console.log(arg.length); // Now we know it has a length property
+  return arg;
+}
+</code></pre>
+<ol start="28">
+<li>Optional Parameters in Callbacks
+Optional parameters in functions can be defined using ? after the parameter name.</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">function greet(name: string, greeting?: string): string {
+  return `${greeting || &quot;Hello&quot;}, ${name}`;
+}
+</code></pre>
+<ol start="29">
+<li>Function Overloads
+Function overloads allow you to define multiple signatures for a function. The implementation must handle all possible cases.</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">function add(a: number, b: number): number;
+function add(a: string, b: string): string;
+function add(a: any, b: any): any {
+  return a + b;
+}
+</code></pre>
+<ol start="30">
+<li>void type
+The void type represents the absence of having any type at all. It is typically used as the return type of functions that do not return a value.</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">function logMessage(message: string): void {
+  console.log(message);
+}
+</code></pre>
+<ol start="31">
+<li>object type
+The object type represents any non-primitive type, i.e., anything that is not number, string, boolean, symbol, null, or undefined.</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">let obj: object = { name: &quot;Alice&quot; };
+</code></pre>
+<ol start="32">
+<li>unknown type
+The unknown type is the type-safe counterpart of any. It requires the developer to perform type assertions or checks before using it.</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">let value: unknown = &quot;Hello&quot;;
+if (typeof value === &quot;string&quot;) {
+  console.log(value.toUpperCase()); // Safe to use as a string
+}
+</code></pre>
+<ol start="33">
+<li>Function type
+The Function type describes any callable object, but it&#x27;s better to specify the exact function signature.</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">let myFunc: (x: number, y: number) =&gt; number;
+myFunc = function (a, b) {
+  return a + b;
+};
+</code></pre>
+<ol start="34">
+<li>Namespaces vs Modules
+Namespaces are used for organizing code within a global scope, primarily in older codebases.</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">namespace MyNamespace {
+  export class MyClass {}
+}
+</code></pre>
+<p>Modules (ES6 modules) are the standard for code organization, providing scoped code and avoiding global pollution.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">// In file1.ts
+export class MyClass {}
+
+// In file2.ts
+import { MyClass } from &quot;./file1&quot;;
+</code></pre>
+<ol start="35">
+<li>File declarations (d.ts)
+Declaration files (.d.ts) provide type information about JavaScript code to TypeScript.</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">// lodash.d.ts
+declare module &quot;lodash&quot; {
+  export function chunk&lt;T&gt;(array: T[], size: number): T[][];
+}
+</code></pre>
+<ol start="36">
+<li>Utility types
+<code>Awaited&lt;Type&gt;</code>: Resolves the type of a promise.</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type Result = Awaited&lt;Promise&lt;string&gt;&gt;; // string
+</code></pre>
+<p><code>Partial&lt;Type&gt;</code>: Makes all properties in Type optional.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">interface Person {
+  name: string;
+  age: number;
+}
+type PartialPerson = Partial&lt;Person&gt;; // { name?: string; age?: number; }
+</code></pre>
+<p><code>Required&lt;Type&gt;</code>: Makes all properties in Type required.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type RequiredPerson = Required&lt;PartialPerson&gt;; // { name: string; age: number; }
+</code></pre>
+<p><code>Readonly&lt;Type&gt;</code>: Makes all properties in Type readonly.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type ReadonlyPerson = Readonly&lt;Person&gt;; // { readonly name: string; readonly age: number; }
+</code></pre>
+<p><code>Record&lt;Keys, Type&gt;</code>: Constructs an object type with a set of properties Keys of Type.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type Roles = &quot;admin&quot; | &quot;user&quot;;
+type Permissions = Record&lt;Roles, boolean&gt;; // { admin: boolean; user: boolean; }
+</code></pre>
+<p><code>Pick&lt;Type, Keys&gt;</code>: Creates a type by picking properties Keys from Type.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type NameOnly = Pick&lt;Person, &quot;name&quot;&gt;; // { name: string; }
+</code></pre>
+<p><code>Omit&lt;Type, Keys&gt;</code>: Creates a type by omitting properties Keys from Type.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type AgeOmitted = Omit&lt;Person, &quot;age&quot;&gt;; // { name: string; }
+</code></pre>
+<p><code>Exclude&lt;UnionType, ExcludedMembers&gt;</code>: Excludes members from a union type.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type T = Exclude&lt;&quot;a&quot; | &quot;b&quot; | &quot;c&quot;, &quot;a&quot;&gt;; // &quot;b&quot; | &quot;c&quot;
+</code></pre>
+<p><code>Extract&lt;Type, Union&gt;</code>: Extracts members from a union type that are assignable to another type.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type T = Extract&lt;&quot;a&quot; | &quot;b&quot; | &quot;c&quot;, &quot;a&quot; | &quot;f&quot;&gt;; // &quot;a&quot;
+</code></pre>
+<p><code>NonNullable&lt;Type&gt;</code>: Excludes null and undefined from Type.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type T = NonNullable&lt;string | null&gt;; // string
+</code></pre>
+<p><code>Parameters&lt;Type&gt;</code>: Extracts the parameter types of a function type as an array.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type T = Parameters&lt;(a: string, b: number) =&gt; void&gt;; // [string, number]
+</code></pre>
+<p><code>ConstructorParameters&lt;Type&gt;</code>: Extracts the parameter types of a constructor type as an array.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type T = ConstructorParameters&lt;ErrorConstructor&gt;; // [message?: string]
+</code></pre>
+<p><code>ReturnType&lt;Type&gt;</code>: Extracts the return type of a function type.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type T = ReturnType&lt;() =&gt; string&gt;; // string
+</code></pre>
+<p><code>InstanceType&lt;Type&gt;</code>: Extracts the instance type of a constructor function type.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type T = InstanceType&lt;typeof Date&gt;; // Date
+</code></pre>
+<p><code>NoInfer&lt;Type&gt;</code>: Prevents TypeScript from inferring a type.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type T&lt;T&gt; = T extends T ? true : false;
+</code></pre>
+<p><code>ThisParameterType&lt;Type&gt;</code>: Extracts this type from a function type.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">function toHex(this: Number) {
+  return this.toString(16);
+}
+type T = ThisParameterType&lt;typeof toHex&gt;; // Number
+</code></pre>
+<p><code>OmitThisParameter&lt;Type&gt;</code>: Removes this parameter from a function type.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">function toHex(this: Number) {
+  return this.toString(16);
+}
+type T = OmitThisParameter&lt;typeof toHex&gt;; // () =&gt; string
+</code></pre>
+<p><code>ThisType&lt;Type&gt;</code>: Specifies the type of this in a function.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">interface MyObject {
+  count: number;
+  increment(this: MyObject): void;
+}
+</code></pre>
+<p>Intrinsic String Manipulation Types:</p>
+<p><code>Uppercase&lt;StringType&gt;</code>: Transforms a string type to uppercase.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type T = Uppercase&lt;&quot;hello&quot;&gt;; // &quot;HELLO&quot;
+</code></pre>
+<p><code>Lowercase&lt;StringType&gt;</code>: Transforms a string type to lowercase.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type T = Lowercase&lt;&quot;HELLO&quot;&gt;; // &quot;hello&quot;
+</code></pre>
+<p><code>Capitalize&lt;StringType&gt;</code>: Transforms the first character of a string type to uppercase.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type T = Capitalize&lt;&quot;hello&quot;&gt;; // &quot;Hello&quot;
+</code></pre>
+<p><code>Uncapitalize&lt;StringType&gt;</code>: Transforms the first character of a string type to lowercase.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">type T = Uncapitalize&lt;&quot;Hello&quot;&gt;; // &quot;hello&quot;
+</code></pre>
+<ol start="37">
+<li>Decorators</li>
+</ol>
+<p>Decorators are special declarations that can be attached to classes and methods to modify their behavior. They are often used for logging, validation, or dependency injection.</p>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">function Log(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+  const originalMethod = descriptor.value;
+  descriptor.value = function (...args: any[]) {
+    console.log(`Calling ${propertyKey} with arguments: ${args}`);
+    return originalMethod.apply(this, args);
+  };
+}
+class Example {
+  @Log
+  greet(name: string) {
+    return `Hello, ${name}`;
+  }
+}
+</code></pre>
+<ol start="38">
+<li>Symbols
+Symbols are a primitive data type representing unique tokens. They are often used as keys for object properties to avoid name collisions.</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">const uniqueKey = Symbol(&quot;key&quot;);
+const obj = {
+  [uniqueKey]: &quot;value&quot;,
+};
+console.log(obj[uniqueKey]); // &quot;value&quot;
+</code></pre>
+<ol start="39">
+<li>Triple-Slash Directives
+Triple-slash directives are single-line comments containing a single XML tag that provide instructions to the compiler.</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">/// &lt;reference path=&quot;path/to/file.ts&quot; /&gt;
+</code></pre>
+<ol start="40">
+<li>Type Inference
+Type inference is a TypeScript feature where the compiler automatically determines the type of a variable based on its initial value or context.</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">let x = 10; // TypeScript infers x as number
+</code></pre>
+<ol start="41">
+<li>using declarations
+using declarations are used to manage resources that need to be explicitly disposed of when no longer needed. This feature is still a proposal in TypeScript and is influenced by C#.</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">using resource = new DisposableResource();
+</code></pre>
+<ol start="42">
+<li>await using declarations
+await using declarations extend using to asynchronous contexts, ensuring resources are disposed of when the await completes. This is also a proposal.</li>
+</ol>
+<p>typescript
+Copy code</p>
+<pre><code class="language-ts">await using resource = new AsyncDisposableResource();
+</code></pre>
+<ol start="43">
+<li>What strategies for migrating from JavaScript to TypeScript do you know?
+Incremental Migration: Gradually convert JavaScript files to TypeScript by renaming .js files to .ts and addressing type issues incrementally.
+Using any: Start with liberal use of the any type and gradually replace it with more specific types.
+Type Declaration Files: Create .d.ts files for existing JavaScript libraries.
+Strict Mode: Enable TypeScript’s strict mode to catch potential errors early and progressively address them.
+Automated Tools: Use tools like ts-migrate to automate parts of the migration process.
+Testing: Ensure comprehensive testing during the migration to catch regressions and type-related issues.</li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/pathliving/front-end-interview-questions/docs/answers/typescript.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/answers/javascript"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Javascript</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/answers/react"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">React</div></a></nav></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/questions/html">Questions</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/questions/html">Answers</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/pathliving/front-end-interview-questions" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Front-end interview questions, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

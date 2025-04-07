@@ -1,0 +1,1380 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-answers/fundamentals" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.4.0">
+<title data-rh="true">Fundamentals (questions prepared) | Front-end interview questions</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://your-docusaurus-site.example.com/docs/answers/fundamentals"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Fundamentals (questions prepared) | Front-end interview questions"><meta data-rh="true" name="description" content="1. Can you explain what happens when you enter a URL into the browser?"><meta data-rh="true" property="og:description" content="1. Can you explain what happens when you enter a URL into the browser?"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://your-docusaurus-site.example.com/docs/answers/fundamentals"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/answers/fundamentals" hreflang="en"><link data-rh="true" rel="alternate" href="https://your-docusaurus-site.example.com/docs/answers/fundamentals" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.70ff24a8.css">
+<script src="/assets/js/runtime~main.cf51990d.js" defer="defer"></script>
+<script src="/assets/js/main.3abde22a.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="Front-end Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="Front-end Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Front-end</b></a><a class="navbar__item navbar__link" href="/docs/questions/html">Questions</a><a class="navbar__item navbar__link" href="/docs/answers/html">Answers</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/pathliving/front-end-interview-questions" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro">Intro</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/resources">Resources</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/todo">TODO</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/questions/html">Questions</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/html">HTML</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/css">CSS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/javascript">Javascript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/typescript">Typecript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/react">React</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/testing">Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/fundamentals">Fundamentals</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/questions/a11y">A11Y</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/answers/html">Answers</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/html">HTML</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/css">CSS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/javascript">Javascript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/typescript">Typecript</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/react">React</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/testing">Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/answers/fundamentals">Fundamentals</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/answers/a11y">A11Y</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Answers</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Fundamentals</span><meta itemprop="position" content="2"></li></ul></nav><div class="theme-doc-markdown markdown"><h1 id="fundamentals-questions-prepared">Fundamentals (questions prepared)</h1>
+<ol>
+<li>Can you explain what happens when you enter a URL into the browser?
+When you enter a URL into the browser, several steps occur:</li>
+</ol>
+<p>DNS Lookup: The browser translates the domain name (e.g., <a href="http://www.example.com">www.example.com</a>) into an IP address using DNS.
+TCP Connection: The browser establishes a TCP connection with the server using the IP address.
+HTTP Request: The browser sends an HTTP request (GET) to the server for the webpage.
+Server Response: The server processes the request and sends back an HTTP response with the requested resources (HTML, CSS, JavaScript, images).
+Rendering: The browser parses the HTML and builds the DOM (Document Object Model). It also parses CSS to apply styles and JavaScript to add interactivity.
+Displaying Content: The browser renders the content and displays the webpage to the user.
+<a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works</a></p>
+<ol start="2">
+<li>
+<p>Describe the difference between a cookie, sessionStorage, localStorage, and IndexedDB.<br>
+<code>Cookie</code>: Small pieces of data stored on the client side, sent with every HTTP request to the server. They have an expiration date and are typically used for session management, user tracking, and storing preferences. Max size: 4000 bytes or 4kB.<br>
+<code>sessionStorage</code>: Stores data for the duration of the page session. Data is cleared when the page session ends (i.e., when the browser or tab is closed). It&#x27;s specific to each window/tab. Max size 5 MB.<br>
+<code>localStorage</code>: Similar to sessionStorage but persists even after the browser or tab is closed. Data is stored indefinitely until explicitly deleted by the user or the application. Max size 5 MB.<br>
+<code>IndexedDB</code>: A low-level API for storing large amounts of structured data, including files/blobs. It provides a more powerful and complex data storage solution than cookies, sessionStorage, or localStorage. Max size 500 MB or up to 80% of disk space.</p>
+</li>
+<li>
+<p>Describe the process of optimizing a website for performance (e.g., assets/resources, JavaScript, scripts).
+Optimizing a website for performance involves several techniques:</p>
+</li>
+</ol>
+<p>Minimize HTTP Requests: Combine files (CSS, JS), use CSS sprites, and inline small assets.
+Minify (obfuscation) and Compress: Minify CSS, JS, and HTML files to reduce their size. Use gzip or Brotli compression for text-based resources.
+Optimize Images: Use appropriate formats (JPEG, PNG, WebP), compress images, and use responsive images with srcset.
+Load Resources Asynchronously: Use async and defer for JavaScript, and lazy load images and other media.
+Reduce JavaScript Execution Time: Split code into smaller bundles, use tree shaking to remove unused code, and optimize loops and functions.
+Leverage Browser Caching: Set appropriate cache headers to allow browsers to cache static resources.
+Use a Content Delivery Network (CDN): Distribute resources across multiple geographical locations to reduce latency.
+Optimize CSS: Reduce the size of CSS files, remove unused CSS, and use critical CSS to inline above-the-fold styles.
+Server-Side Optimizations: Optimize server response times, use HTTP/2, and employ techniques like server-side rendering (SSR).</p>
+<ol start="5">
+<li>What tools would you use to find a performance bug in your code?
+To find performance bugs, you can use:</li>
+</ol>
+<p>Browser DevTools: Chrome DevTools, Firefox Developer Tools for profiling and inspecting performance bottlenecks.
+Lighthouse: An open-source tool for auditing web page performance, accessibility, SEO, and more.
+WebPageTest: A tool for analyzing website performance from multiple locations.
+GTmetrix: Provides insights into performance issues and suggestions for improvements.
+New Relic: A performance monitoring tool that helps in identifying server-side bottlenecks.
+Sentry: For tracking and debugging errors in real-time.</p>
+<ol start="6">
+<li>What are the approaches to optimizing the performance of a web page?
+Referencing the article, the approaches include:</li>
+</ol>
+<p>Minimize Critical Rendering Path: Reduce the number of resources and their size that block the rendering process.
+Optimize Resource Delivery: Use HTTP/2, enable server push, and employ resource hints like preload and prefetch.
+Use Efficient Coding Practices: Optimize JavaScript, CSS, and image files. Minify and compress assets.
+Improve Caching Strategies: Use appropriate caching headers to leverage browser and CDN caching.
+Reduce JavaScript Execution Time: Split code into smaller chunks, lazy load non-essential scripts, and use web workers for heavy computations.
+Optimize Images: Use responsive images, proper formats, and compression.
+Reduce Reflows and Repaints: Optimize animations and dynamic content changes to avoid layout thrashing.</p>
+<ol start="7">
+<li>What is PRPL pattern &amp; RAIL model?
+PRPL Pattern:</li>
+</ol>
+<p>Push critical resources for the initial URL route.
+Render initial route as soon as possible.
+Pre-cache remaining routes.
+Lazy-load and create remaining routes on demand.
+PRPL focuses on optimizing the loading performance of web applications, especially for single-page applications (SPAs).
+RAIL Model:</p>
+<p>Response: Respond to user input in under 100ms.
+Animation: Produce a frame in under 16ms.
+Idle: Maximize idle time to perform background tasks.
+Load: Deliver content and become interactive in under 1 second.
+The RAIL model focuses on performance metrics that impact user experience, emphasizing speed and responsiveness.</p>
+<ol start="8">
+<li>Explain the difference between layout, painting, and compositing.
+Layout (Reflow):</li>
+</ol>
+<p>This is the process where the browser calculates the position and size of elements on the page.
+It occurs when the DOM is modified and the changes affect the document&#x27;s structure or element geometry.
+Painting:</p>
+<p>The process of filling in pixels for visual elements, such as drawing text, colors, borders, and shadows.
+It happens after layout, and every visual element is drawn onto layers.
+Compositing:</p>
+<p>The process where painted layers are combined together into the final image displayed on the screen.
+This step occurs after layout and painting, assembling the layers in the correct order.</p>
+<ol start="9">
+<li>
+<p>What are the main metrics that measure site performance?
+First Contentful Paint (FCP): Time from navigation to the first contentful paint.
+Largest Contentful Paint (LCP): Time taken for the largest content element to load.
+First Input Delay (FID): Delay between the first user interaction and the browser&#x27;s response.
+Cumulative Layout Shift (CLS): Measures the visual stability by tracking unexpected layout shifts.
+Time to Interactive (TTI): Time until the page becomes fully interactive.
+Total Blocking Time (TBT): Time the main thread is blocked during page load.</p>
+</li>
+<li>
+<p>What do you know about Core Web Vitals?
+Core Web Vitals are specific metrics identified by Google to measure user experience on the web:</p>
+</li>
+</ol>
+<p>Largest Contentful Paint (LCP): Measures loading performance. Ideal LCP should occur within 2.5 seconds.
+First Input Delay (FID): Measures interactivity. Ideal FID should be less than 100 milliseconds.
+Cumulative Layout Shift (CLS): Measures visual stability. Ideal CLS should be less than 0.1.</p>
+<ol start="11">
+<li>What is the difference between laboratory and field measurements of performance?
+Laboratory Measurements:</li>
+</ol>
+<p>Conducted in a controlled environment using tools like Lighthouse or WebPageTest.
+They provide consistent, reproducible results but may not reflect real-world conditions.
+Field Measurements:</p>
+<p>Collected from real users interacting with the site, using tools like Google Analytics or the Chrome User Experience Report (CrUX).
+They provide insights into actual user experiences but can vary due to diverse environments and user conditions.</p>
+<ol start="12">
+<li>What is Cumulative Layout Shift and how to improve its value?
+Cumulative Layout Shift (CLS):</li>
+</ol>
+<p>Measures the sum of all unexpected layout shifts that occur during the entire lifespan of the page.
+Layout shifts can be caused by images without dimensions, ads or embeds without dimensions, dynamically injected content, web fonts causing FOIT/FOUT, and actions waiting for a network response before updating DOM.
+Improving CLS:</p>
+<p>Specify size attributes for images and video elements.
+Reserve space for ads and embeds.
+Avoid inserting content above existing content.
+Use transform animations instead of properties that trigger layout changes.</p>
+<ol start="13">
+<li>How do you implement lazy loading for images and other resources to optimize loading time?
+Lazy Loading for Images:</li>
+</ol>
+<p>Use the loading=&quot;lazy&quot; attribute on <code>&lt;img&gt;</code> tags.
+Example: <code>&lt;img src=&quot;image.jpg&quot; loading=&quot;lazy&quot; alt=&quot;description&quot;&gt;</code>
+Intersection Observer API:</p>
+<p>A JavaScript API to detect when elements are in the viewport.
+Example:
+javascript
+Copy code</p>
+<pre><code class="language-js">const lazyImages = document.querySelectorAll(&quot;img.lazy&quot;);
+const observer = new IntersectionObserver((entries, observer) =&gt; {
+  entries.forEach((entry) =&gt; {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.src = img.dataset.src;
+      img.classList.remove(&quot;lazy&quot;);
+      observer.unobserve(img);
+    }
+  });
+});
+
+lazyImages.forEach((img) =&gt; {
+  observer.observe(img);
+});
+</code></pre>
+<p>Dynamic Imports:</p>
+<p>For other resources, use dynamic import() to load modules on demand.
+Example:
+javascript
+Copy code</p>
+<pre><code class="language-js">if (condition) {
+  import(&quot;./module.js&quot;).then((module) =&gt; {
+    // Use the module
+  });
+}
+</code></pre>
+<ol start="14">
+<li>Are you familiar with drawing up a performance budget? How do you understand this concept?
+Performance Budget:</li>
+</ol>
+<p>A set of constraints that help teams ensure a website meets performance goals.
+It typically includes metrics like page load time, size of HTML/CSS/JS files, number of HTTP requests, and critical rendering path metrics.
+Understanding:</p>
+<p>Establishing a performance budget involves defining acceptable limits for these metrics to maintain a good user experience.
+Example: Limiting total page weight to 1MB, ensuring FCP under 1 second, and limiting the number of third-party scripts.</p>
+<ol start="15">
+<li>
+<p>What is DOM?
+DOM (Document Object Model):
+A programming interface for web documents.
+Represents the page so that programs can change the document structure, style, and content.
+The DOM is an object-oriented representation of the web page, which can be modified with JavaScript to create dynamic content.</p>
+</li>
+<li>
+<p>Why manipulations with DOM is so heavy and expensive?
+Recalculations:
+Manipulations often trigger reflows (layout recalculations) and repaints, which are computationally expensive.
+Reflows:
+A reflow recalculates the positions and sizes of elements, affecting the entire render tree. It can be triggered by adding, removing, or changing DOM elements.
+Repaints:
+Repaints are triggered by visual changes not affecting layout, such as changing a background color. Reflows often trigger repaints.
+Minimizing Impact:
+Batch DOM changes, use document fragments, and avoid layout thrashing (reading and writing to the DOM repeatedly).
+<a href="https://web.dev/articles/rendering-performance">https://web.dev/articles/rendering-performance</a>
+<a href="https://performance.shopify.com/blogs/blog/how-layout-position-impacts-three-big-web-performance-levers">https://performance.shopify.com/blogs/blog/how-layout-position-impacts-three-big-web-performance-levers</a></p>
+</li>
+<li>
+<p>What are some ways you may improve your website&#x27;s scrolling performance?
+<code>Throttling</code> and <code>Debouncing</code>:</p>
+</li>
+</ol>
+<p>Use <code>throttling</code> to limit the number of times an event handler is called during scrolling.
+Use <code>debouncing</code> to delay execution until a certain time has passed since the last event.
+Example with <code>throttling</code>:
+javascript
+Copy code
+window.addEventListener(&#x27;scroll&#x27;, throttle(handleScroll, 100));
+Virtualization:</p>
+<p>Render only the visible portion of a large list and a small buffer around it.
+Use libraries like React Virtualized for React applications.
+CSS Optimization:</p>
+<p>Use will-change property to inform the browser of what will change, allowing it to optimize rendering.
+Avoid triggering layout changes during scroll.</p>
+<ol start="18">
+<li>What is Flash of Unstyled Content? How do you avoid FOUC?
+Flash of Unstyled Content (FOUC):</li>
+</ol>
+<p>A brief appearance of unstyled HTML content before the CSS is fully loaded and applied.
+Avoiding FOUC:</p>
+<p>Ensure CSS is loaded before rendering content. Place <code>&lt;link&gt;</code> tags for CSS in the <code>&lt;head&gt;</code> section.
+Use critical CSS: inline essential CSS for above-the-fold content.
+Implement a loading animation or placeholder until styles are fully applied.</p>
+<ol start="19">
+<li>
+<p>In what order are user-defined events processed in the DOM (click, mouseover, etc.)? FIFO or LIFO?
+FIFO (First In, First Out):
+Events are processed in the order they are added to the event queue.
+This ensures that the first event to be triggered is the first to be processed.</p>
+</li>
+<li>
+<p>What is a CDN and what is the benefit of using one?
+Content Delivery Network (CDN):</p>
+</li>
+</ol>
+<p>A network of geographically distributed servers that cache and deliver web content to users based on their location.
+Benefits:</p>
+<p>Improved Load Times: Reduces latency by serving content from the nearest server.
+Increased Reliability: Distributes traffic to prevent server overloads.
+Enhanced Security: Provides DDoS protection and can enforce security policies.
+Scalability: Handles large volumes of traffic efficiently.</p>
+<ol start="21">
+<li>What is domain pre-fetching and how does it help with performance?
+Domain Pre-fetching:</li>
+</ol>
+<p>A technique where the browser is instructed to pre-resolve DNS lookups for a specified domain.
+It helps with performance by reducing the DNS resolution time for future requests to that domain.
+Usage:</p>
+<p>html
+Copy code</p>
+<p><code>&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//example.com&quot;&gt;</code></p>
+<ol start="22">
+<li>Preload, preconnect, and prefetch:
+Preload (Critical CSS, fonts, or JavaScript):</li>
+</ol>
+<p>Tells the browser to download and cache a resource as soon as possible
+Used for critical resources needed for the current page
+Example: <code>&lt;link rel=&quot;preload&quot; href=&quot;style.css&quot; as=&quot;style&quot;&gt;</code></p>
+<p>Preconnect (Third-party APIs, CDNs):</p>
+<p>Establishes early connections to important third-party origins
+Reduces time for DNS lookups, redirects, and TCP handshakes
+Example: <code>&lt;link rel=&quot;preconnect&quot; href=&quot;https://example.com&quot;&gt;</code></p>
+<p>Prefetch (Resources for the next page in a user flow):</p>
+<p>Suggests resources that might be needed for future navigation
+Lower priority than preload, used for future pages
+Example: <code>&lt;link rel=&quot;prefetch&quot; href=&quot;page2.html&quot;&gt;</code></p>
+<ol start="22">
+<li>What is the impact of network latency on web performance?
+Network Latency:</li>
+</ol>
+<p>The delay between a request being sent from the client and the response being received from the server.
+High latency can significantly slow down page load times, especially for resources that are not cached or are fetched from distant servers.
+Mitigation:</p>
+<p>Use CDNs, optimize server response times, minimize HTTP requests, and leverage HTTP/2 or HTTP/3 for multiplexing.</p>
+<ol start="23">
+<li>What are the differences between HTTP/1.1, HTTP/2, and HTTP/3?
+HTTP/1.1:</li>
+</ol>
+<p>Text-based protocol with a single request-response per connection.
+Connection keep-alive, chunked transfer encoding, and pipelining (rarely used due to head-of-line blocking).
+HTTP/2:</p>
+<p>Binary protocol with multiplexing, allowing multiple requests/responses over a single connection.
+Header compression (HPACK) and server push capabilities.
+HTTP/3:</p>
+<p>Based on QUIC, a transport layer protocol using UDP instead of TCP.
+Eliminates head-of-line blocking at the transport layer, improves performance and reliability.</p>
+<ol start="24">
+<li>How do you handle cross-origin resource sharing (CORS)?
+CORS (Cross-Origin Resource Sharing):</li>
+</ol>
+<p>A mechanism that allows resources on a web page to be requested from another domain outside the domain from which the resource originated.
+(A mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served.
+Addresses the security issue where browsers block cross-origin HTTP requests initiated from scripts.)
+Handling CORS:</p>
+<p>On the server, set the appropriate CORS headers.
+Example:
+http
+Copy code
+Access-Control-Allow-Origin: <a href="https://example.com">https://example.com</a>
+Access-Control-Allow-Methods: GET, POST
+Access-Control-Allow-Headers: Content-Type</p>
+<ol start="25">
+<li>What is a Service Worker and what can it be used for?
+Service Worker:</li>
+</ol>
+<p>A script that runs in the background, separate from the web page, enabling features like offline capabilities, push notifications, and background sync.
+Usage:</p>
+<p>Offline Caching: Intercepts network requests and serves cached resources when offline.
+Push Notifications: Receives push messages from a server.
+Background Sync: Delays actions until the user has stable connectivity.</p>
+<ol start="26">
+<li>Web workers vs Service workers vs Worklets</li>
+</ol>
+<p>Web Workers:</p>
+<p>Used for running scripts in background threads.
+They don&#x27;t have access to the DOM but can perform tasks like data processing.
+Example: new Worker(&#x27;worker.js&#x27;).</p>
+<p>Service Workers:</p>
+<p>Act as a proxy between web applications and the network.
+Enable features like offline caching, push notifications, and background sync.
+Example:
+javascript
+Copy code</p>
+<pre><code class="language-js">if (&quot;serviceWorker&quot; in navigator) {
+  navigator.serviceWorker.register(&quot;/service-worker.js&quot;);
+}
+</code></pre>
+<p>Worklets:</p>
+<p>Lightweight scripts that allow low-level control over CSS (CSS Paint API) or audio processing (AudioWorklet).
+Execute in a controlled environment with limited capabilities.
+Example: CSS.paintWorklet.addModule(&#x27;worklet.js&#x27;);.</p>
+<ol>
+<li>PWA (workbox)
+Workbox:
+A set of libraries and Node modules that make it easy to cache assets and take full advantage of features used to build progressive web apps (PWAs).
+Simplifies service worker development.
+Example using Workbox:
+javascript
+Copy code</li>
+</ol>
+<pre><code class="language-js">import { registerRoute } from &quot;workbox-routing&quot;;
+import { StaleWhileRevalidate } from &quot;workbox-strategies&quot;;
+
+registerRoute(
+  ({ request }) =&gt; request.destination === &quot;image&quot;,
+  new StaleWhileRevalidate({
+    cacheName: &quot;images&quot;,
+  })
+);
+</code></pre>
+<ol start="28">
+<li>
+<p>Can you describe some SEO best practices or techniques you have used lately?
+SEO Best Practices:
+Title Tags &amp; Meta Descriptions: Use unique and descriptive titles and meta descriptions.
+Keywords: Include relevant keywords naturally in content, headings, and meta tags.
+Mobile Optimization: Ensure the site is mobile-friendly.
+Page Speed: Optimize images, minify CSS/JS, and leverage browser caching.
+Internal Linking: Use internal links to help with site navigation and SEO.
+Alt Text for Images: Provide descriptive alt text for images.
+Structured Data: Implement schema markup to help search engines understand content.</p>
+</li>
+<li>
+<p>What is microformats?
+Microformats:
+Simple conventions used to add semantic meaning to HTML content.
+Make web content more accessible and machine-readable by adding attributes like class and rel.
+Example:
+html
+Copy code</p>
+</li>
+</ol>
+<pre><code class="language-html">&lt;div class=&quot;h-card&quot;&gt;
+  &lt;span class=&quot;p-name&quot;&gt;John Doe&lt;/span&gt;
+  &lt;a class=&quot;u-url&quot; href=&quot;http://johndoe.com&quot;&gt;johndoe.com&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+<ol start="30">
+<li>
+<p>What is SEO? What should a developer pay attention to in order to ensure good SEO performance in the future?
+SEO (Search Engine Optimization):
+The practice of improving the ranking of a website on search engines.
+Key Focus Areas:
+Content Quality: High-quality, relevant content that answers user queries.
+Technical SEO: Proper use of HTML tags, structured data, and sitemap.
+Mobile-Friendliness: Responsive design and fast loading times.
+Page Speed: Optimize load times using various techniques (minifying resources, using CDNs).
+Security: Ensure the site is secure (use HTTPS).
+User Experience: Ensure the site is easy to navigate and provides a good user experience.</p>
+</li>
+<li>
+<p>Can you describe the difference between progressive enhancement and graceful degradation?</p>
+</li>
+</ol>
+<p>Progressive Enhancement:</p>
+<p>Starts with a basic level of user experience and adds enhancements for browsers that support advanced features.
+Focuses on content first, then presentation and behavior.
+Example: Building a form with basic HTML, then adding CSS for styling and JavaScript for advanced interactions.</p>
+<p>Graceful Degradation:</p>
+<p>Designs the full-featured experience first and then ensures it degrades gracefully for less capable browsers.
+Focuses on providing a good user experience even if some advanced features are not supported.</p>
+<ol>
+<li>Describe the difference between SSR and CSR. Discuss the pros and cons. Are you familiar with static rendering? Rehydration?
+SSR (Server-Side Rendering):</li>
+</ol>
+<p>HTML is rendered on the server and sent to the client.
+Pros:
+Better initial load performance.
+Improved SEO.
+Faster time-to-content.
+Cons:
+Higher server load.
+Complex implementation.
+CSR (Client-Side Rendering):</p>
+<p>HTML is rendered on the client using JavaScript.
+Pros:
+Reduced server load.
+Richer, interactive experiences.
+Easier to scale.
+Cons:
+Slower initial load time.
+Potential SEO challenges without pre-rendering or dynamic rendering.
+Static Rendering:</p>
+<p>Pre-renders HTML at build time.
+Suitable for content that doesn’t change often.
+Example: Static site generators like Gatsby or Next.js.
+Rehydration:</p>
+<p>Process of attaching event listeners and JavaScript to a pre-rendered HTML to make it interactive.
+Used in SSR to make the static HTML interactive once loaded on the client.</p>
+<ol start="33">
+<li>
+<p>What are Web Accessibility standards and how do you implement them?
+Web Accessibility Standards:
+Guidelines ensuring that websites are usable by people with disabilities.
+WCAG (Web Content Accessibility Guidelines): Provides recommendations for making web content more accessible.
+Implementation:
+Semantic HTML: Use proper HTML tags.
+ARIA (Accessible Rich Internet Applications): Use ARIA roles and attributes.
+Keyboard Navigation: Ensure the site can be navigated using the keyboard.
+Alt Text: Provide descriptive alt text for images.
+Contrast Ratios: Ensure sufficient color contrast.
+Forms: Use labels and fieldsets.</p>
+</li>
+<li>
+<p>Explain what ARIA and screen readers are, and how to make a website accessible.
+ARIA (Accessible Rich Internet Applications):</p>
+</li>
+</ol>
+<p>A set of attributes that make web content more accessible by providing additional context to screen readers.
+Example: <code>&lt;button aria-label=&quot;Close&quot;&gt;X&lt;/button&gt;</code>.
+Screen Readers:</p>
+<p>Software that reads the content of the screen aloud to users with visual impairments.
+Making Websites Accessible:
+Use semantic HTML and ARIA attributes.
+Ensure all interactive elements are focusable.
+Provide text alternatives for non-text content.
+Ensure logical focus order and keyboard navigation.</p>
+<ol start="35">
+<li>What are HTTP methods (GET, POST, PUT, DELETE)? List all HTTP methods that you know, and explain them. And HTTP statuses (200, 300, 400, 404, 500).
+HTTP Methods:</li>
+</ol>
+<p>GET: Retrieve data from the server.
+POST: Send data to the server to create a resource.
+PUT: Update or replace an existing resource.
+DELETE: Delete a resource.
+HEAD: Retrieve headers for a resource, without the body.
+OPTIONS: Describe the communication options for the target resource.
+PATCH: Apply partial modifications to a resource.
+TRACE: Performs a message loop-back test
+CONNECT: Establishes a tunnel to the server</p>
+<p>HTTP Status Codes:
+1xx - Informational
+100 Continue
+101 Switching Protocols</p>
+<p>2xx - Success
+200 OK
+201 Created
+204 No Content</p>
+<p>3xx - Redirection
+301 Moved Permanently
+302 Found (temporary redirect)
+304 Not Modified</p>
+<p>4xx - Client Errors
+400 Bad Request
+401 Unauthorized
+403 Forbidden
+404 Not Found
+405 Method Not Allowed
+429 Too Many Requests</p>
+<p>5xx - Server Errors
+500 Internal Server Error
+502 Bad Gateway
+503 Service Unavailable
+504 Gateway Timeout</p>
+<ol start="36">
+<li>What is HTTP and HTTPS, and what is the difference between them?
+HTTP (HyperText Transfer Protocol):</li>
+</ol>
+<p>The protocol used for transmitting web pages over the internet.
+Not secure, data is transmitted in plain text.
+HTTPS (HyperText Transfer Protocol Secure):</p>
+<p>Secure version of HTTP using SSL/TLS for encryption.
+Protects data integrity and confidentiality by encrypting the data transmitted between the client and server.
+Provides authentication of the website.</p>
+<ol start="37">
+<li>TLS/SSL, handshake protocols, TCP/UDP, HTTP, DHCP, DNS</li>
+</ol>
+<p>TLS/SSL (Transport Layer Security / Secure Sockets Layer):</p>
+<p>Cryptographic protocols for secure communication over a network.
+<a href="https://www.cloudflare.com/learning/ssl/what-is-ssl/#:~:text=Secure%20Sockets%20Layer%20(SSL)%20is,Transport%20Layer%20Security%20(TLS)">How does SSL/TLS work?</a>.</p>
+<p>TCP/UDP (Transmission Control Protocol / User Datagram Protocol):</p>
+<p>TCP: Connection-oriented protocol ensuring reliable data transmission.
+UDP: Connectionless protocol used for faster, less reliable transmissions.</p>
+<p>HTTP (HyperText Transfer Protocol):</p>
+<p>Protocol for transferring hypertext requests and information on the internet.</p>
+<p>DHCP (Dynamic Host Configuration Protocol):</p>
+<p>Protocol for assigning IP addresses and other network configuration to devices on a network.</p>
+<p>DNS (Domain Name System):</p>
+<p>System for translating domain names into IP addresses.</p>
+<ol start="38">
+<li>Interceptor
+Interceptor:
+A function that intercepts HTTP requests or responses before they are handled by the application.
+Used in frameworks like Angular or libraries like Axios.
+Example in Axios:
+javascript
+Copy code</li>
+</ol>
+<pre><code class="language-js">axios.interceptors.request.use(
+  (config) =&gt; {
+    // Modify request config
+    return config;
+  },
+  (error) =&gt; {
+    // Handle error
+    return Promise.reject(error);
+  }
+);
+</code></pre>
+<ol start="39">
+<li>
+<p>Explain how you would implement error handling for network requests.
+Error Handling:
+Try-Catch: Use try-catch blocks to handle exceptions.
+Status Codes: Check the response status code to determine if the request was successful.
+Retries: Implement retries for transient errors.
+Fallbacks: Provide fallback options in case of failures.
+Example:
+javascript
+Copy code</p>
+<pre><code class="language-js">async function fetchData(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(&quot;Fetch error:&quot;, error);
+    // Handle error or retry logic
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>What is REST?
+REST (Representational State Transfer):
+An architectural style for designing networked applications.
+Uses stateless, client-server communication, and standard HTTP methods (GET, POST, PUT, DELETE).
+Focuses on resources, identified by URIs.
+Example: A REST API for managing users might include endpoints like <code>/users</code>, <code>/users/{id}</code>.</p>
+</li>
+<li>
+<p>What is the difference between PUT and PATCH methods in REST?
+PUT:</p>
+</li>
+</ol>
+<p>Used to update a resource or create it if it does not exist.
+Sends the complete resource data.
+Idempotent: Multiple identical requests will result in the same state.
+Example:
+http
+Copy code</p>
+<pre><code>PUT /users/1
+`{
+&quot;name&quot;: &quot;John Doe&quot;,
+&quot;email&quot;: &quot;john.doe@example.com&quot;
+}`
+PATCH:
+
+Used to apply partial updates to a resource.
+Sends only the fields that need to be updated.
+Not necessarily idempotent.
+Example:
+http
+Copy code
+PATCH /users/1
+`{
+&quot;email&quot;: &quot;john.doe@newdomain.com&quot;
+}`
+</code></pre>
+<ol start="42">
+<li>What is the difference between GraphQL vs REST?</li>
+</ol>
+<p>GraphQL:</p>
+<p>A query language for APIs that allows clients to request exactly the data they need.
+Single endpoint for all queries.
+Reduces over-fetching and under-fetching of data.
+Example Query:
+graphql
+Copy code</p>
+<pre><code class="language-{">user(id: 1) {
+name
+email
+}
+}```
+
+REST:
+
+Architectural style with multiple endpoints for different resources.
+Fixed data structure defined by the server.
+Can result in over-fetching or multiple requests to gather all needed data.
+Example Endpoint: `/users/1`
+
+43. What is the difference between GraphQL Apollo vs GraphQL Relay?
+    Apollo:
+
+A comprehensive GraphQL ecosystem including a client and server implementation.
+Focuses on ease of use and developer experience.
+Supports caching, error handling, and other features out-of-the-box.
+Relay:
+
+A JavaScript framework for building data-driven React applications with GraphQL.
+Developed by Facebook, it focuses on performance and scalability.
+Uses a unique approach to manage data fetching and updating.
+
+44. What is GraphQL fragment?
+    GraphQL Fragment:
+    A reusable unit of a GraphQL query.
+    Allows for splitting complex queries into smaller, reusable parts.
+    Example:
+    graphql
+    Copy code
+
+```js
+fragment userFields on User {
+id
+name
+email
+}
+
+query {
+user(id: 1) {
+...userFields
+}
+}
+</code></pre>
+<ol start="45">
+<li>What are the differences between Websockets (SOAP and WAMP), Long-Polling, and Server-Sent Events?</li>
+</ol>
+<p>Websockets:</p>
+<p>Full-duplex communication channel over a single TCP connection.
+Real-time, bidirectional communication.
+Example Use: Chat applications.</p>
+<p>Long-Polling:</p>
+<p>Client makes a request and server holds the request open until new data is available.
+Simulates real-time communication by repeatedly polling the server.
+Example Use: Notifications.</p>
+<p>Server-Sent Events (SSE):</p>
+<p>Server can push updates to the client over a single HTTP connection.
+Unidirectional: Server to client.
+Example Use: Live scores.</p>
+<ol start="46">
+<li>What is fetch vs xhr, and what is the difference?</li>
+</ol>
+<p>fetch:</p>
+<p>Modern, promise-based API for making HTTP requests.
+Simpler syntax and better support for async/await.
+Example:
+javascript
+Copy code</p>
+<pre><code>fetch(&#x27;https://api.example.com/data&#x27;)
+.then(response =&gt; response.json())
+.then(data =&gt; console.log(data));
+</code></pre>
+<p>xhr (XMLHttpRequest):</p>
+<p>Older, callback-based API for making HTTP requests.
+More verbose and less intuitive.</p>
+<p>Example:
+javascript
+Copy code</p>
+<pre><code>const xhr = new XMLHttpRequest();
+xhr.open(&#x27;GET&#x27;, &#x27;https://api.example.com/data&#x27;);
+xhr.onload = () =&gt; console.log(xhr.responseText);
+xhr.send();
+</code></pre>
+<ol start="47">
+<li>What is abort controller?
+AbortController:
+A way to abort a fetch request.
+Provides a signal that can be passed to a fetch request to cancel it.
+Example:
+javascript
+Copy code</li>
+</ol>
+<pre><code class="language-js">const controller = new AbortController();
+const signal = controller.signal;
+
+fetch(&quot;https://api.example.com/data&quot;, { signal })
+  .then((response) =&gt; response.json())
+  .then((data) =&gt; console.log(data))
+  .catch((error) =&gt; {
+    if (error.name === &quot;AbortError&quot;) {
+      console.log(&quot;Fetch aborted&quot;);
+    } else {
+      console.error(&quot;Fetch error:&quot;, error);
+    }
+  });
+
+controller.abort(); // Aborts the fetch request
+</code></pre>
+<ol start="48">
+<li>
+<p>What is BAAS (Backend as a Service)?
+BAAS (Backend as a Service):
+Cloud service model that provides backend functionalities like database, authentication, and file storage.
+Enables developers to focus on frontend development.
+Examples: Firebase, AWS Amplify.</p>
+</li>
+<li>
+<p>What is BFF (Backend for Frontend)?
+BFF (Backend for Frontend):
+A design pattern where each frontend application has a corresponding backend service.
+Tailors backend services to the specific needs of the frontend.
+Improves separation of concerns and optimizes communication between frontend and backend.</p>
+</li>
+<li>
+<p>Can you explain any common techniques or recent issues solved in regards to front-end security (.env, CORS, CSP headers, HTML sanitizer)?
+Common Front-End Security Techniques:
+Environment Variables: Store sensitive information like API keys in .env files.
+CORS (Cross-Origin Resource Sharing): Controls how resources on a web page can be requested from another domain.
+CSP (Content Security Policy) Headers: Mitigates cross-site scripting (XSS) attacks by controlling the resources the user agent is allowed to load.
+HTML Sanitizer: Removes potentially harmful content from user input to prevent XSS attacks.</p>
+</li>
+<li>
+<p>How to manage the secrets in your project?
+Managing Secrets:
+Environment Variables: Store secrets in environment variables, not in source code.
+Secret Management Services: Use services like AWS Secrets Manager, Azure Key Vault, or HashiCorp Vault.
+Configuration Files: Store secrets in configuration files that are not checked into version control.
+Environment-Specific Configs: Use different configurations for development, staging, and production environments.</p>
+</li>
+<li>
+<p>What is Cross-Site Scripting (XSS) and Cross-Site Request Forgery (CSRF) attacks, and ways to protect from them?
+XSS (Cross-Site Scripting):</p>
+</li>
+</ol>
+<p>Injection of malicious scripts into web pages viewed by other users.
+Protection:
+Validate and sanitize user inputs.
+Use Content Security Policy (CSP).
+Escape HTML, JavaScript, and CSS outputs.
+CSRF (Cross-Site Request Forgery):</p>
+<p>Tricks a user into executing unwanted actions on a web application where they are authenticated.
+Protection:
+Use anti-CSRF tokens.
+Implement SameSite cookies.
+Validate HTTP headers and referrer.</p>
+<ol start="53">
+<li>
+<p>Describe your perfect React application stack.
+Perfect React Application Stack:
+Frontend:
+React (UI library)
+Redux or Context API (state management)
+React Router (routing)
+Styled-components or CSS Modules (styling)
+Backend:
+Node.js with Express (server)
+GraphQL or REST API (API layer)
+MongoDB or PostgreSQL (database)
+Tooling:
+Webpack or Vite (module bundler)
+Babel (JavaScript compiler)
+ESLint (linting)
+Prettier (code formatting)
+Jest (testing)
+Deployment:
+Docker (containerization)
+CI/CD pipeline with GitHub Actions or Jenkins
+Hosting on AWS, Vercel, or Netlify</p>
+</li>
+<li>
+<p>What you choose CSS pre-processors or CSS-in-JS, and why?
+CSS Pre-processors (e.g., SASS, LESS):</p>
+</li>
+</ol>
+<p>Pros:
+Rich feature set (variables, nesting, mixins).
+Mature ecosystem.
+Cons:
+Global scope can lead to style conflicts.
+Requires additional build steps.
+Usage: When working on large-scale projects where a mature CSS methodology (BEM, OOCSS) is preferred.
+CSS-in-JS (e.g., Styled-components, Emotion):</p>
+<p>Pros:
+Scoped styles by default.
+Seamless integration with JavaScript and React.
+Dynamic styling capabilities.
+Cons:
+May increase the bundle size.
+Learning curve for developers used to traditional CSS.
+Usage: When building modern React applications that benefit from scoped and dynamic styling.</p>
+<ol start="56">
+<li>Can we create mixins in CSS-in-JS?
+Mixins in CSS-in-JS:
+Yes, mixins can be created in CSS-in-JS libraries like Styled-components and Emotion.
+Example using Styled-components:
+javascript
+Copy code<!-- -->
+<pre><code>const mixin = css`  color: palevioletred;
+</code></pre>
+</li>
+</ol>
+<p>font-size: 16px;`;</p>
+<p>const StyledButton = styled.button<code>  ${mixin};   background: papayawhip;</code>;</p>
+<pre><code>
+57. What is an Isomorphic application?
+  Isomorphic (Universal) Application:
+  A web application that runs the same code on both the client and the server.
+  Benefits include improved SEO, faster initial load times, and better performance.
+  Example: Using Next.js with React to render pages on the server and then hydrate them on the client.
+
+58. What is centrifuge?
+  Centrifuge:
+  A real-time messaging library that provides a scalable solution for delivering messages to connected clients.
+  Typically used for building applications that require real-time updates, such as chat applications, live notifications, and online gaming.
+
+59. What is sentry?
+  Sentry:
+  An error tracking and monitoring tool that helps developers identify and fix issues in real-time.
+  Provides detailed error reports, including stack traces, context, and user actions leading up to the error.
+  Supports multiple platforms and integrates with popular development tools.
+
+60. What is Grafana and Kibana?
+  Grafana:
+
+An open-source platform for monitoring and observability.
+Allows users to visualize metrics from various data sources (e.g., Prometheus, InfluxDB) through customizable dashboards.
+Kibana:
+
+An open-source data visualization tool designed to work with Elasticsearch.
+Provides powerful search and analytics capabilities, including creating visualizations and dashboards from log data.
+
+61. What is DTO and class-validator?
+
+  DTO (Data Transfer Object):
+
+An object that carries data between processes to reduce the number of method calls.
+Typically used to encapsulate data and send it from one subsystem of an application to another.
+
+class-validator:
+
+A library for validating objects in Node.js and TypeScript.
+Allows for declarative validation by adding decorators to class properties.
+Example:
+typescript
+Copy code
+
+```js
+import { IsEmail, IsNotEmpty } from &quot;class-validator&quot;;
+
+class UserDto {
+@IsNotEmpty()
+name: string;
+
+@IsEmail()
+email: string;
+}
+</code></pre>
+<ol start="62">
+<li>
+<p>What are signals, how are they implemented in different frameworks?
+Signals:
+A mechanism for broadcasting events and changes in state across different parts of an application.
+In various frameworks:
+React: useState and useEffect hooks for state management and side effects.
+Angular: EventEmitter and RxJS for handling events and observables.
+Vue.js: reactive and ref APIs for reactivity and state management.</p>
+</li>
+<li>
+<p>What is Web Components?
+Web Components:
+A suite of web platform APIs that allow developers to create reusable and encapsulated HTML tags.
+Includes three main specifications:
+Custom Elements: Define new HTML elements.
+Shadow DOM: Encapsulate styles and markup to prevent them from affecting the rest of the document.
+HTML Templates: Define chunks of markup that are inert until instantiated.</p>
+</li>
+<li>
+<p>What is middleware in Express.js?
+Middleware in Express.js:
+Functions that execute during the lifecycle of a request to the Express server.
+Used for tasks such as logging, parsing request bodies, authentication, and error handling.
+Example:
+javascript
+Copy code</p>
+</li>
+</ol>
+<pre><code class="language-js">const express = require(&quot;express&quot;);
+const app = express();
+
+// Logging middleware
+app.use((req, res, next) =&gt; {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
+
+// Route handler
+app.get(&quot;/&quot;, (req, res) =&gt; {
+  res.send(&quot;Hello, World!&quot;);
+});
+
+app.listen(3000, () =&gt; {
+  console.log(&quot;Server is running on port 3000&quot;);
+});
+</code></pre>
+<ol start="65">
+<li>Relational vs non-relational DB (mySQL/noSQL, PostgreSQL vs MongoDB, Redis)
+Relational Databases (RDBMS):</li>
+</ol>
+<p>Examples: MySQL, PostgreSQL.
+Use structured query language (SQL).
+Store data in tables with rows and columns.
+Support ACID transactions.
+Suitable for structured data and complex queries.
+Non-relational Databases (NoSQL):</p>
+<p>Examples: MongoDB (document-based), Redis (key-value store).
+Flexible schema design.
+Horizontal scaling.
+Suitable for unstructured data and large-scale distributed data.
+Types:
+Document-based: MongoDB, CouchDB.
+Key-value stores: Redis, DynamoDB.
+Column-family stores: Cassandra, HBase.
+Graph databases: Neo4j.</p>
+<ol start="66">
+<li>Strong profiling and debugging knowledge (Chrome DevTools, React DevTools, Redux DevTools)
+Chrome DevTools:</li>
+</ol>
+<p>Set of web development tools built into Google Chrome.
+Features: Elements inspection, console for debugging, network activity analysis, performance profiling, memory inspection.
+React DevTools:</p>
+<p>Browser extension for debugging React applications.
+Features: Component hierarchy inspection, state and props monitoring, performance profiling.
+Redux DevTools:</p>
+<p>Extension for debugging Redux state changes.
+Features: State inspection, action history, time-travel debugging, and middleware logging.</p>
+<ol start="67">
+<li>
+<p>Abstract Syntax Tree (AST)
+Abstract Syntax Tree (AST):
+A tree representation of the abstract syntactic structure of source code.
+Nodes represent constructs in the source code.
+Used by compilers and interpreters for syntax analysis, code transformation, and optimization.
+Example: Parsing JavaScript code let x = 10; into an AST with nodes for variable declaration, identifier, and literal.</p>
+</li>
+<li>
+<p>Authorization. JWT
+JWT (JSON Web Token):
+A compact, URL-safe token format used for securely transmitting information between parties.
+Consists of three parts: Header, Payload, and Signature.
+Header: Metadata about the token.
+Payload: Claims, such as user information and permissions.
+Signature: Ensures the token has not been tampered with.
+Example:
+json
+Copy code</p>
+<pre><code class="language-json">{
+  &quot;header&quot;: {
+  &quot;alg&quot;: &quot;HS256&quot;,
+  &quot;typ&quot;: &quot;JWT&quot;
+  },
+  &quot;payload&quot;: {
+  &quot;sub&quot;: &quot;1234567890&quot;,
+  &quot;name&quot;: &quot;John Doe&quot;,
+  &quot;iat&quot;: 1516239022
+  },
+  &quot;signature&quot;: &quot;SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c&quot;
+  }
+</code></pre>
+</li>
+<li>
+<p>Design patterns
+Design Patterns:
+Creational Patterns: Deal with object creation.
+Singleton: Ensures a class has only one instance.
+Factory: Creates objects without specifying the exact class.
+Structural Patterns: Deal with object composition.
+Adapter: Allows incompatible interfaces to work together.
+Decorator: Adds behavior to objects dynamically.
+Behavioral Patterns: Deal with object interaction.
+Observer: Defines a subscription mechanism for notifying objects.
+Strategy: Defines a family of algorithms and makes them interchangeable.</p>
+</li>
+<li>
+<p>GoF (Gang of Four) patterns
+Gang of Four (GoF) Patterns:
+Introduced in the book &quot;Design Patterns: Elements of Reusable Object-Oriented Software&quot; by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
+Consist of 23 design patterns categorized into Creational, Structural, and Behavioral.</p>
+</li>
+<li>
+<p>What is MVC, MVP, MVVM, etc?
+MVC (Model-View-Controller):</p>
+</li>
+</ol>
+<p>Separates application logic into three interconnected components.
+Model: Manages data (Data).
+View: Displays data (UI).
+Controller: Handles user input and updates the model (app logic).</p>
+<p>MVP (Model-View-Presenter):
+Similar to MVC but with a Presenter instead of a Controller.
+Presenter: Handles all UI logic and updates the View.</p>
+<p>MVVM (Model-View-ViewModel):
+Separates the development of the graphical user interface.
+ViewModel: Manages the state of the view, interacts with the model, and handles view logic.</p>
+<ol start="72">
+<li>
+<p>What are the drawbacks of MVW pattern?
+Drawbacks of MVW (Model-View-Whatever) Pattern:
+Increased complexity with large applications.
+Tight coupling between components can lead to maintenance difficulties.
+Potential for performance issues due to frequent data binding and updates.
+Steeper learning curve for developers unfamiliar with the pattern.</p>
+</li>
+<li>
+<p>What is DDD (Domain Driven Design), Event Sourcing + CQRS?
+DDD (Domain Driven Design):</p>
+</li>
+</ol>
+<p>A software development approach focusing on modeling complex business domains.
+Uses concepts like Entities, Value Objects, Aggregates, and Domain Events.
+Event Sourcing:</p>
+<p>Storing the state of a system as a sequence of events.
+Allows for rebuilding the state by replaying events.
+CQRS (Command Query Responsibility Segregation):</p>
+<p>Separates the read and write operations in a system.
+Commands: Perform write operations.
+Queries: Perform read operations.</p>
+<ol start="74">
+<li>Web application architecture (event-driven architecture/application etc)
+Event-Driven Architecture:</li>
+</ol>
+<p>Decouples components by using events to trigger actions.
+Improves scalability and flexibility.
+Example: Microservices communicating via events.
+Monolithic Architecture:</p>
+<p>A single-tiered software application where different components are interconnected and interdependent.
+Simple to develop but can become unwieldy as the application grows.
+Microservices Architecture:</p>
+<p>A collection of small, independent services that communicate over well-defined APIs.
+Enhances scalability and allows for independent deployment.</p>
+<ol start="75">
+<li>What is Onion Architecture, module-based, atomic design, feature-sliced design/FSD?
+Onion Architecture:</li>
+</ol>
+<p>Layers structured around the core domain logic.
+Core: Domain model.
+Inner Layers: Use cases and application services.
+Outer Layers: Interfaces, infrastructure, and external systems.
+Module-Based Design:</p>
+<p>Breaks down the application into distinct, interchangeable modules.
+Enhances reusability and maintainability.
+Atomic Design:</p>
+<p>A methodology for creating design systems.
+Atoms: Basic building blocks (buttons, inputs).
+Molecules: Combinations of atoms (form groups).
+Organisms: Groups of molecules (header, footer).
+Templates and Pages: Structures of organisms.
+Feature-Sliced Design (FSD):</p>
+<p>Organizes codebase by features instead of technical layers.
+Improves code modularity and facilitates team collaboration.</p>
+<ol start="76">
+<li>
+<p>What is TOGAF?
+TOGAF (The Open Group Architecture Framework) is a framework for enterprise architecture that provides a comprehensive approach for designing, planning, implementing, and governing enterprise information architecture. It helps organizations align their business goals with IT infrastructure and improve efficiency.</p>
+</li>
+<li>
+<p>Describe the Design/Architecture (Antipatterns)?
+Design/Architecture antipatterns are common but flawed responses to recurring design problems. Examples include:</p>
+</li>
+</ol>
+<p>God Object: A class that knows too much or does too much.
+Spaghetti Code: Code with a complex and tangled control structure.
+Golden Hammer: Using a familiar tool or technology for all problems.
+Lava Flow: Retaining poorly documented and understood code that no one dares to change.</p>
+<ol start="78">
+<li>
+<p>What is Code smells?
+Code smells are indicators of potential issues in the code that may not be bugs but suggest problems that could lead to bugs or harder maintenance. Examples include duplicated code, long methods, large classes, and poor naming conventions.</p>
+</li>
+<li>
+<p>What is DRY, KISS, YAGNI?
+DRY (Don&#x27;t Repeat Yourself): Avoid code duplication; every piece of knowledge must have a single, unambiguous representation.
+KISS (Keep It Simple, Stupid): Systems should be as simple as possible but no simpler; avoid unnecessary complexity.
+YAGNI (You Aren&#x27;t Gonna Need It): Don&#x27;t add functionality until it is necessary; avoid over-engineering.</p>
+</li>
+<li>
+<p>What is <code>SOLID</code>?
+<code>SOLID</code> is a set of principles for designing maintainable and extendable object-oriented software:</p>
+</li>
+</ol>
+<p><code>S</code> - Single Responsibility Principle (SRP): A class should have one, and only one, reason to change.<br>
+<code>O</code> - Open/Closed Principle (OCP): Software entities should be open for extension but closed for modification.<br>
+<code>L</code> - Liskov Substitution Principle (LSP): Subtypes must be substitutable for their base types without altering the correctness of the program.<br>
+<code>I</code> - Interface Segregation Principle (ISP): Clients should not be forced to depend on interfaces they do not use.<br>
+<code>D</code> - Dependency Inversion Principle (DIP): High-level modules should not depend on low-level modules. Both should depend on abstractions.</p>
+<p><code>SOLID in React</code>: Але, S - які тут питання можуть бути? Розповісти, що в реакті є компоненти? О - пропси у компонентів, відкритість до змін. L - компоненти можна підміняти, якщо вони реалізовують єдиний інтерфейс. І - точно те саме, декомпозируй, подрібнюй компоненти, інтерфейси, моделі як вважаєш за потрібним. D - це трохи складніше, але так само можно робити щоб компоненти залежали тільки від абстракцій щоб потім можна було їми легко жанглювати.</p>
+<ol start="81">
+<li>
+<p>Dependency inversion vs inversion of control vs dependency injection
+<code>Dependency Inversion</code>: A principle where high-level modules should depend on abstractions, not on low-level modules.<br>
+<code>Inversion of Control (IoC)</code>: A broader concept where the control of objects or portions of a program is transferred to a container or framework.<br>
+<code>Dependency Injection (DI)</code> - passing dependencies to a class rather than creating them internally. DI is a specific form of IoC. Dependencies includes:</p>
+<ul>
+<li>Services: External services like a database service, logging service, or an API client.</li>
+<li>Objects: Instances of other classes that a class depends on to perform its tasks.</li>
+<li>Configurations: Configuration settings or parameters that the class requires.</li>
+<li>Libraries: Specific instances of libraries or tools that the class uses.</li>
+</ul>
+</li>
+<li>
+<p>SOLID vs GRASP
+SOLID: A set of principles focused on creating well-structured and maintainable object-oriented code.
+GRASP (General Responsibility Assignment Software Patterns): A set of principles for assigning responsibilities to objects, emphasizing high cohesion and low coupling. Examples include Information Expert, Creator, and Controller.</p>
+</li>
+<li>
+<p>What is the difference between inheritance and composition? What do you prefer? Why?
+Inheritance: A mechanism where a new class inherits properties and behavior from an existing class.
+Composition: A design principle where a class is composed of one or more objects from other classes, promoting code reuse and flexibility.
+Preference: Composition is generally preferred because it provides greater flexibility and adheres to the principle of favoring composition over inheritance. It allows for easier maintenance and avoids the pitfalls of deep inheritance hierarchies.</p>
+</li>
+<li>
+<p>What is CSR, SSR, SSG, and what the difference?
+CSR (Client-Side Rendering): Rendering occurs on the client side, typically using JavaScript frameworks like React or Angular. Content is fetched and rendered dynamically.
+SSR (Server-Side Rendering): Rendering occurs on the server, and the fully rendered HTML is sent to the client. This approach improves SEO and initial load performance.
+SSG (Static Site Generation): Pages are pre-rendered at build time into static HTML. This approach combines the benefits of fast load times and SEO friendliness.
+ISR (Incremental Static Regeneration): ISR allows you to update static content after the initial build without rebuilding the entire site. It combines the benefits of SSG by pre-rendering pages at build time and the flexibility of updating content on-demand. This is particularly useful for pages that change frequently but not on every request, providing a balance between static content&#x27;s speed and dynamic content&#x27;s flexibility.
+Difference: CSR renders content in the browser, SSR renders content on the server, and SSG generates static HTML files during the build process.</p>
+</li>
+<li>
+<p>What is event bus?
+An event bus is a design pattern that allows different components or services to communicate with each other through events. It decouples the sender and receiver, facilitating a more modular and scalable architecture. In React, libraries like Redux or context API can implement an event bus pattern for state management and component communication .</p>
+</li>
+<li>
+<p>Tell us about Observer, Pub/Sub patterns. What is the difference between them? Give examples of the implementation of these patterns in known frameworks/libraries/browser APIs.
+Observer Pattern: Objects (observers) subscribe to another object (subject) to get notified when the subject&#x27;s state changes. Example: JavaScript&#x27;s EventTarget API.
+Pub/Sub Pattern: A messaging pattern where senders (publishers) send messages to a central broker, and receivers (subscribers) get messages from the broker based on topic subscriptions. Example: Node.js EventEmitter, Redux.
+Difference: In the observer pattern, subjects maintain a list of observers and notify them directly, while in the pub/sub pattern, a broker mediates the communication between publishers and subscribers.</p>
+</li>
+<li>
+<p>What is introspection? What is the difference between introspection and reflection?
+Introspection: The ability of a program to examine the type or properties of an object at runtime.
+Reflection: A broader concept that includes introspection but also allows for dynamically invoking methods, accessing fields, and modifying the structure of objects.
+Difference: Introspection is limited to examining types and properties, while reflection includes the ability to manipulate them .</p>
+</li>
+<li>
+<p>monorepo (webpack module federation (micro front-end), nx / lerna, turborepo)
+A monorepo is a single repository that contains multiple projects, often sharing code and dependencies. Tools like Webpack Module Federation, Nx, Lerna, and Turborepo help manage and build monorepos, facilitating code reuse and consistent dependencies across projects.</p>
+</li>
+<li>
+<p>What are the advantages/disadvantages of monorepositories vs using different repositories?
+Advantages of Monorepos:</p>
+</li>
+</ol>
+<p>Easier code sharing and reuse.
+Consistent dependency management.
+Simplified refactoring across projects.
+Disadvantages of Monorepos:</p>
+<p>Can become large and unwieldy.
+More complex CI/CD pipelines.
+Potential for longer build times.
+Advantages of Different Repositories:</p>
+<p>Clear separation of concerns.
+Independent versioning and deployment.
+Smaller, more manageable repositories.
+Disadvantages of Different Repositories:</p>
+<p>Harder to share code and manage dependencies.
+More complex to coordinate changes across repositories.</p>
+<ol start="90">
+<li>What is microservice architecture of Front-end App and its advantages compared to monolithic architecture?
+Microservice architecture divides a front-end application into small, independent services that can be developed, deployed, and scaled independently. Each microservice handles a specific part of the application&#x27;s functionality.</li>
+</ol>
+<p>Advantages:</p>
+<p>Improved scalability.
+Independent deployment and development.
+Fault isolation.
+Compared to Monolithic:</p>
+<p>Monolithic: A single, large application where all components are interconnected.
+Microservices: Small, autonomous services that communicate over APIs, providing better flexibility and scalability.</p>
+<ol start="91">
+<li>How would you design a system for high availability and scalability?
+High Availability:</li>
+</ol>
+<p>Redundancy: Use multiple servers and failover mechanisms.
+Load Balancing: Distribute traffic across multiple servers.
+Monitoring: Implement health checks and automated recovery processes.
+Scalability:</p>
+<p>Horizontal Scaling: Add more servers to handle increased load.
+Vertical Scaling: Increase resources (CPU, RAM) of existing servers.
+Caching: Use caching strategies (e.g., CDNs, in-memory caches) to reduce load on servers.
+Microservices: Architect the system using microservices to scale individual components independently.</p>
+<ol start="92">
+<li>
+<p>What are the strategies for scaling web applications?
+Vertical Scaling: Increase the resources of a single server (e.g., more RAM, CPU).
+Horizontal Scaling: Add more servers to handle increased load.
+Caching: Use CDNs, in-memory caches (e.g., Redis) to reduce server load.
+Load Balancing: Distribute incoming traffic across multiple servers.
+Database Optimization: Use read replicas, sharding, and indexing to optimize database performance.
+Microservices: Decompose the application into smaller, independently scalable services.</p>
+</li>
+<li>
+<p>What design patterns do you know and where to apply them?
+Singleton: Ensure a class has only one instance. Used in logging, configuration settings.
+Factory: Create objects without specifying the exact class. Used in object creation patterns.
+Observer: Allow objects to be notified of state changes. Used in event handling.
+Decorator: Add behavior to objects dynamically. Used in modifying class functionality.
+Strategy: Define a family of algorithms, encapsulate each one. Used in algorithm selection.</p>
+</li>
+<li>
+<p>What architectural patterns of web applications were used and what are their advantages?
+MVC (Model-View-Controller): Separates application logic, UI, and data. Advantages: modularity, separation of concerns.
+MVVM (Model-View-ViewModel): Enhances MVC with a ViewModel for two-way data binding. Advantages: easier to manage UI state.
+Microservices: Decomposes application into small, independent services. Advantages: scalability, independent deployment.
+Serverless: Uses cloud services to handle backend logic. Advantages: scalability, cost efficiency.</p>
+</li>
+<li>
+<p>How should you develop scalable and high-performance front-end systems?
+Optimize rendering and minimize DOM manipulation.
+Use code-splitting and lazy loading to reduce initial load time.
+Implement caching strategies.
+Minimize and optimize asset sizes (e.g., images, scripts).
+Use performance monitoring tools to identify bottlenecks.
+Write efficient, reusable code and follow best practices.</p>
+</li>
+<li>
+<p>How to maintain a balance between ready-made solutions and development of own solutions in projects? How should decisions be made about the choice?
+Evaluate the complexity and scope of the project.
+Use ready-made solutions for common functionalities to save time and ensure reliability.
+Develop custom solutions when unique requirements or optimizations are needed.
+Consider the long-term maintenance and scalability of the chosen solution.
+Make decisions based on project requirements, team expertise, and cost-benefit analysis.</p>
+</li>
+<li>
+<p>How you conduct planning meeting? How you estimate the tasks? Do you use hours or points?
+Planning Meeting: Gather team members, review project goals, and break down tasks.
+Estimating Tasks: Use techniques like Planning Poker or T-shirt sizing to estimate effort.
+Units of Estimation: Use story points to measure relative effort, considering complexity and risk. Hours can be used for more granular time tracking but may be less effective for relative sizing.</p>
+</li>
+<li>
+<p>Configuring the <code>ci/cd</code> pipelines (pipelines, deploy, package-lock file, .env)
+CI/CD Pipelines: Automate build, test, and deployment processes.
+Deploy: Set up environments and automate deployment steps.
+Package-lock file: Ensure consistent dependency versions across environments.
+.env Files: Manage environment-specific configurations securely.</p>
+</li>
+<li>
+<p><code>npm i --production</code>
+The command <code>npm i --production</code> installs only the dependencies listed under &quot;dependencies&quot; in the package.json file, excluding &quot;devDependencies&quot;. This is often used for production deployments to reduce the footprint and avoid installing unnecessary packages.</p>
+</li>
+<li>
+<p>What is package-lock.json for?
+package-lock.json ensures that installations are consistent across different environments by locking the exact versions of dependencies and their sub-dependencies. It provides a reliable way to reproduce the node_modules structure.</p>
+</li>
+<li>
+<p>What is the difference between npm install and npm ci?
+npm install: Installs dependencies based on the package.json file, potentially updating the package-lock.json.
+npm ci: Installs dependencies based on the package-lock.json, ensuring exact versions and providing faster, more reliable builds.</p>
+</li>
+<li>
+<p>What tools do you know or already use to improve your code?
+Linters: ESLint, TSLint
+Formatters: Prettier
+Type Checkers: TypeScript
+Testing Frameworks: Jest, Mocha, Cypress
+Build Tools: Webpack, Babel
+Code Analysis: SonarQube, CodeClimate</p>
+</li>
+<li>
+<p>What is semver?
+Semantic Versioning (semver) is a versioning scheme for software that uses a three-part version number: MAJOR.MINOR.PATCH. Changes in the major version indicate incompatible API changes, minor version changes indicate added functionality in a backward-compatible manner, and patch changes indicate backward-compatible bug fixes.</p>
+</li>
+<li>
+<p>What is the difference between git merge and git rebase?
+Git Merge: Combines two branches by creating a new commit that includes changes from both branches, preserving the history of both.
+Git Rebase: Reapplies commits from one branch onto another, creating a linear history. It can simplify the commit history but may require conflict resolution and force pushes.</p>
+</li>
+<li>
+<p>What is git flow in a few words?
+Git flow is a branching model for Git that defines a strict branching structure:</p>
+</li>
+</ol>
+<p>Feature Branches: For developing new features.
+Develop Branch: Integration branch for features.
+Release Branches: Prepare for a release.
+Master Branch: Holds production-ready code.
+Hotfix Branches: For critical bug fixes.</p>
+<ol start="106">
+<li>
+<p>How do you ensure cross-browser compatibility?
+PostCSS: Automate vendor prefixing.
+Polyfills: Add missing functionality for older browsers.
+Testing: Use tools like BrowserStack or Sauce Labs to test on different browsers.
+CSS Resets: Normalize or reset CSS to reduce inconsistencies.</p>
+</li>
+<li>
+<p>What is hash (hash function, hashmap) + encryption + encoding?
+Hash Function: A function that converts input data into a fixed-size string of characters, typically a hash code.
+Hashmap: A data structure that uses hash functions to map keys to values, providing fast data retrieval.
+Encryption: The process of converting data into a coded form to prevent unauthorized access.
+Encoding: The process of converting data into a specific format for efficient transmission or storage.</p>
+</li>
+<li>
+<p>What is normalizing data, and how we can do it?
+Normalizing data is the process of organizing data to reduce redundancy and improve data integrity. It involves structuring data into tables in a relational database and defining relationships between them. This can be done using normalization rules like 1NF, 2NF, and 3NF.</p>
+</li>
+<li>
+<p>What is shadow traffic?
+Shadow traffic refers to legitimate traffic that is miscategorized or miscounted by web analytics tools, leading to discrepancies in traffic reporting. This can occur due to bots, spiders, or other non-human interactions that mimic real user behavior.</p>
+</li>
+<li>
+<p>What is single source of truth (SSOT)?
+A single source of truth (SSOT) is a practice of structuring information models and associated schemata such that every data element is stored exactly once. Changes to the data are made in one place and propagated to all other parts of the system, ensuring consistency and accuracy.</p>
+</li>
+<li>
+<p>What is Jamstack?
+Jamstack is a modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup. It decouples the frontend from the backend, resulting in faster and more secure web applications.</p>
+</li>
+<li>
+<p>What is stateful vs stateless?
+Stateful: Systems or components that maintain state between requests. Example: sessions in a web application.
+Stateless: Systems or components that do not maintain state between requests. Each request is independent. Example: RESTful APIs.</p>
+</li>
+<li>
+<p>High cohesion and low coupling
+High Cohesion: Keeping related functionalities within a single module, making the system easier to maintain and understand.
+Low Coupling: Reducing dependencies between modules, making the system more flexible and easier to modify.</p>
+</li>
+<li>
+<p>OOP vs FP
+OOP (Object-Oriented Programming): A paradigm based on objects containing data and methods. Emphasizes encapsulation, inheritance, and polymorphism.
+FP (Functional Programming): A paradigm based on pure functions, immutability, and higher-order functions. Emphasizes declarative programming and avoiding side effects.</p>
+</li>
+<li>
+<p>Tell us about functional programming.
+Functional programming (FP) is a paradigm that treats computation as the evaluation of mathematical functions. It avoids changing state and mutable data, emphasizes the use of pure functions, and supports higher-order functions and function composition. FP promotes a declarative style of programming and aims for cleaner, more predictable code.</p>
+</li>
+<li>
+<p>What is the difference between imperative and declarative programming in JS?
+Imperative Programming: Specifies the steps the program must take to achieve a desired state. Example: iterating over an array with a for loop.
+Declarative Programming: Describes what the program should accomplish without specifying how. Example: using array methods like map, filter, and reduce.</p>
+</li>
+<li>
+<p>What is API contact?
+API contracts are essential for defining how software components interact, ensuring clear communication, consistency, and decoupling. They serve as both a technical specification and a form of documentation, making it easier to develop, test, and maintain APIs. By adhering to a well-defined API contract, development teams can work more efficiently and deliver more reliable software.</p>
+</li>
+<li>
+<p>What is the difference between Authentication and Authorization?
+<code>Authentication</code>: Confirms the user&#x27;s identity (Who are you?).
+<code>Authorization</code>: Determines the user&#x27;s permissions (What are you allowed to do?).</p>
+</li>
+<li>
+<p>What is SDLC?</p>
+</li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/pathliving/front-end-interview-questions/docs/answers/fundamentals.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/answers/testing"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Testing</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/answers/a11y"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">A11Y</div></a></nav></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/questions/html">Questions</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/questions/html">Answers</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/pathliving/front-end-interview-questions" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Front-end interview questions, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
